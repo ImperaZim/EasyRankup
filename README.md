@@ -1,20 +1,19 @@
-# EasyWarps [![](https://poggit.pmmp.io/shield.state/EasyWarps)](https://poggit.pmmp.io/p/EasyWarps)
-![EasyWarps](https://images-ext-1.discordapp.net/external/-B4gyhX3tHZMWZRgyDRGmNoucDM_b6LDyuc05tzEWyA/https/repository-images.githubusercontent.com/547500502/9cb24fee-b7a4-48eb-a860-359bc8f72f20)
+# EasyGroups 
+![EasyGroups](https://media.discordapp.net/attachments/645792232632221729/1032113968845697034/57_Sem_Titulo_20221018041500.png)
 
-A simple plugin to set teleport points on worlds to make it easier for players to get around! <br> **[Download phar](https://poggit.pmmp.io/r/194673/EasyWarps_dev-12.phar)** ``Beta Version``
+A plugin for you to define groups and roles for players and permissions for these roles easily! <br> **[Download phar]()** ``soon``
 - - - -
 ## Compatibility
 This plugin is meant to be used on servers made only in the software **[PocketMine-MP](https://github.com/pmmp/PocketMine-MP)**, it may not work perfectly in variants of it.
 
 ## Commands:
-- /warps
-- /warp [args...]
+- /easygroups
+- /easygroups [args...]
 
 ## Main commands:
-- create: /warp create
-- delete: /warp delete
-
-## Commands args:
-- create: /warp create (name) (permission)
-- delete: /warp delete (name) 
+- create: /easygroups create
+- delete: /easygroups delete
+- set: /easygroups set
+- list: /easygroups list
+- edit: /easygroups edit
 
