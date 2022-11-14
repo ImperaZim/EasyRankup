@@ -51,7 +51,7 @@ class Loader extends PluginBase {
   }
 
   public static function registerRepeatingTask() : void {
-   self::$instance->getScheduler()->scheduleRepeatingTask(new AsyncTask(self::$instance), 5);
+   self::$instance->getScheduler()->scheduleRepeatingTask(new AsyncTask(), 5);
   }
   
   public static function getProcessedTags(array $tag, array $processed, String $message) : String {
