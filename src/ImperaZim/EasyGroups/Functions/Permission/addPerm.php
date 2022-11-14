@@ -25,9 +25,9 @@ class addPerm {
   $groups = new Config($plugin->getDataFolder() . "groups.yml");
   foreach ($groups->getAll() as $group => $data){
    if($array == "") {
-    $array .= $groups->getAll()[$group]["tag"] . "§r§7 (" . (count($groups->getAll()[$group]["permission"]) ?? 0) . "§7 ermissions)";
+    $array .= $groups->getAll()[$group]["tag"] . "§r§7 (" . (count($groups->getAll()[$group]["permission"])) . "§7 ermissions)";
    }else{
-    $array .= "|" . $groups->getAll()[$group]["tag"] . "§r§7 (" . (count($groups->getAll()[$group]["permission"]) ?? 0) . "§7 Permissions)";
+    $array .= "|" . $groups->getAll()[$group]["tag"] . "§r§7 (" . (count($groups->getAll()[$group]["permission"])) . "§7 Permissions)";
    }
   }
   $groups = explode("|", $array);
@@ -63,10 +63,11 @@ class addPerm {
   return $form;   
  }
  
- public static function addPermission($group, $permission) {
+ public static function addPermission($player, $group, $permission) {
   $plugin = Loader::getInstance(); 
   $data = new Config($plugin->getDataFolder() . "groups.yml");
   $config = $data->getAll();
+  $messages = $plugin->getConfig();
   /* WHAT???? 
   if (count($data->getAll()[$group]["permission"]) >= 1){
    if (in_array($permission, $data->getAll()[$group]["permission"])) {
@@ -80,7 +81,7 @@ class addPerm {
   $data->setAll($config);
   $data->save(); 
   $tag = $config[$group]["tag"];
-  $player->sendessage(Loader::getProcessedTags(["{prefix}", "{group}", "{permission}"], [$messagem->get("default.prefix"), $tag, $permission], $messagem->getNested('commands.subcommands.addpermission.sucess', false)));  
+  $player->sendessage(Loader::getProcessedTags(["{prefix}", "{group}", "{permission}"], [$messages->get("default.prefix"), $tag, $permission], $messages->getNested('commands.subcommands.addpermission.sucess', false)));  
   self::reloadPermissions();
  }
  
