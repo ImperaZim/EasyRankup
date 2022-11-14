@@ -24,20 +24,20 @@ commands:
   editcommand:
    help_message: "{prefix} §7Use /easygroup edit (name)"
   createcommand:
-   success: "{prefix} §7Group §e{group} §7successfully created!"
+   sucess: "{prefix} §7Group §e{group} §7sucessfully created!"
    failed: "{prefix} §7The group §and{group} §7already exists!"
    failed_type: "{prefix} §7Type §and{type} §7does not exist!"
   deletecommand:
    form_confirm: "§7Do you really want to delete group §e{group}§7 from your server?"
-   success: "{prefix} §7The group {deleted_group} §7was deleted from the server, players with this group will have their group changed to {default_group}"
+   sucess: "{prefix} §7The group {deleted_group} §7was deleted from the server, players with this group will have their group changed to {default_group}"
    player_notify: "{prefix} §7The group §e{deleted_group} §7has been deleted from the server and its group has been changed to §e{default_group}"
    group_no_exist: "{prefix} §7The group {group} does not exist!"
    has_default: "{prefix} §7You cannot delete the group §e{group}§7 as it is the default group!"
   setdefaultgroup:
-   success: "{prefix} §7The group §e{group}§7 has been set as default!"
+   sucess: "{prefix} §7The group §e{group}§7 has been set as default!"
   addpermission:
    failed: "{prefix} §7Please enter a valid permission!"
-   success: "{prefix} §7Permission §e{permission}§7 has been successfully added to group §{group}§7!"
+   sucess: "{prefix} §7Permission §e{permission}§7 has been sucessfully added to group §{group}§7!"
    has_perm: "{prefix} §7Permission §e{permission} §7already exists in group §e{group}§7!"
   removepermission:
-   success: "{prefix} §7Permission §e{permission}§7 has been successfully removed from group §{group}§7!"
+   sucess: "{prefix} §7Permission §e{permission}§7 has been sucessfully removed from group §{group}§7!"
