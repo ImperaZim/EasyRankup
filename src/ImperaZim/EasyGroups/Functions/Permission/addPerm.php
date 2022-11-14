@@ -49,7 +49,7 @@ class addPerm {
    if (is_null($data)) return true;
    $permission = $data["permission"];
    if (strlen($permission) <= 0 || $permission == null) {
-    $player->sendPessage(Loader::getProcessedTags(["{prefix}"], [$messagem->get("default.prefix")], $messagem->getNested('commands.subcommands.addpermission.failed', false))); 
+    $player->sendMessage(Loader::getProcessedTags(["{prefix}"], [$messagem->get("default.prefix")], $messagem->getNested('commands.subcommands.addpermission.failed', false))); 
     return true;
    }
    self::addPermission($player, $group, $permission);
@@ -72,7 +72,7 @@ class addPerm {
   if (count($data->getAll()[$group]["permission"]) >= 1){
    if (in_array($permission, $data->getAll()[$group]["permission"])) {
     $tag = $config[$group]["tag"]; 
-    $player->sendessage(Loader::getProcessedTags(["{prefix}", "{group}", "{permission}"], [$messagem->get("default.prefix"), $tag, $permission], $messagem->getNested('commands.subcommands.addpermission.has_perm', false)));   
+    $player->sendMessage(Loader::getProcessedTags(["{prefix}", "{group}", "{permission}"], [$messagem->get("default.prefix"), $tag, $permission], $messagem->getNested('commands.subcommands.addpermission.has_perm', false)));   
     return true;
    }
   }
@@ -81,7 +81,7 @@ class addPerm {
   $data->setAll($config);
   $data->save(); 
   $tag = $config[$group]["tag"];
-  $player->sendessage(Loader::getProcessedTags(["{prefix}", "{group}", "{permission}"], [$messages->get("default.prefix"), $tag, $permission], $messages->getNested('commands.subcommands.addpermission.sucess', false)));  
+  $player->sendMessage(Loader::getProcessedTags(["{prefix}", "{group}", "{permission}"], [$messages->get("default.prefix"), $tag, $permission], $messages->getNested('commands.subcommands.addpermission.sucess', false)));  
   self::reloadPermissions();
  }
  
