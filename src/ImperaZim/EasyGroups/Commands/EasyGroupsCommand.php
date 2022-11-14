@@ -64,7 +64,7 @@ class EasyGroupsCommand extends Command implements PluginOwned {
     return;
    }
    if (in_array($args[0], ["help", "ajuda"])) {
-    $player->sendMessage("§l§eGROUPS§r §7EasyGroups commands: \n §e-> §7/easygroups help \n §e-> §7/easygroups list \n §e-> §7/easygroups edit (name) \n §e-> §7/easygroups create \n §e-> §7/easygroups delete \n §e-> §7/easygroups set (player) (name) \n §e-> §7/easygroups addperm \n §e-> §7/easygroups removeperm");
+    $player->sendMessage("§l§eGROUPS§r §7EasyGroups commands: \n §e-> §7/easygroups help \n §e-> §7/easygroups list \n §e-> §7/easygroups edit (name) \n §e-> §7/easygroups create \n §e-> §7/easygroups delete \n §e-> §7/easygroups set (player) (name) \n §e-> §7/easygroups setdefault \n §e-> §7/easygroups addperm \n §e-> §7/easygroups removeperm");
     return;
    }
    if (in_array($args[0], ["lista", "list"])) { 
