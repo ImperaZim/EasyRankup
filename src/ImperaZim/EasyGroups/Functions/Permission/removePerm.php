@@ -48,11 +48,11 @@ class removePerm {
    if (isset($data["perm"])) return true;
    self::removePermission($player, $group, $data["perm"]);
   });
-  $form->setTitle("§cEasyGroups §7 » Select permission to remove");
-  $form->addLabel("§b");
   $data = new Config($plugin->getDataFolder() . "groups.yml");
   $config = $data->getAll();
-  if (count($config[$group]["permission"]) >= 1) {
+  $form->setTitle("§cEasyGroups §7 » {$config[$group]['tag']}");
+  $form->addLabel("§b"); 
+  if (count(permission"]) >= 1) {
   $form->addDropdown("§7Listed Permissions (select max \"1\")", $config[$group]["permission"], 0, "perm");
   }else{
    $form->addLabel("§7This group no have permissions!");
@@ -67,7 +67,7 @@ class removePerm {
   $config = $data->getAll(); 
   $tag = $config[$group]["tag"];
   $messages = $plugin->getConfig();
-  $player->sendMessage(Loader::getProcessedTags(["{prefix}", "{group}", "{permission}"], [$messages->get("default.prefix"), $tag, $config[$group]["permission"][$permId]], $messages->getNested('commands.subcommands.removepermission.sucess', false)));  
+  $player->sendMessage(Loader::getProcessedTags(["{prefix}", "{group}", "{permission}"], [$messages->get("default.prefix"), $tag, $config[$group]["permission"][$permId]], $messages->getNested('commands.subcommands.removepermission.sucess')));  
   unset($config[$group]["permission"][$permId]); 
   $data->setAll($config);
   $data->save(); 
