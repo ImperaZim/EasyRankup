@@ -8,7 +8,7 @@ use pocketmine\plugin\PluginBase;
 use ImperaZim\EasyGroups\Task\AsyncTask;
 use ImperaZim\EasyGroups\Events\ChatGroupEvent;
 use ImperaZim\EasyGroups\Functions\Groups\_Group;
-use ImperaZim\EasyGroups\Events\DefultGroupEvent;
+use ImperaZim\EasyGroups\Events\DefaultGroupEvent;
 use ImperaZim\EasyGroups\Functions\Storage\SQLite3;
 use ImperaZim\EasyGroups\Commands\EasyGroupsCommand;
 
@@ -35,7 +35,7 @@ class Loader extends PluginBase {
 
   public static function registerEvents() : void {
    $events = [ChatGroupEvent::class,
-    DefultGroupEvent::class];
+    DefaultGroupEvent::class];
    foreach ($events as $event) {
     Server::getInstance()->getPluginManager()->registerEvents(new $event(), self::$instance);
    }
