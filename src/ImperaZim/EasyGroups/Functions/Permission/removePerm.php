@@ -65,12 +65,12 @@ class removePerm {
   $plugin = Loader::getInstance(); 
   $data = new Config($plugin->getDataFolder() . "groups.yml");
   $config = $data->getAll(); 
+  $tag = $config[$group]["tag"];
+  $messages = $plugin->getConfig();
+  $player->sendMessage(Loader::getProcessedTags(["{prefix}", "{group}", "{permission}"], [$messages->get("default.prefix"), $tag, $config[$group]["permission"][$permId]], $messages->getNested('commands.subcommands.removepermission.sucess', false)));  
   unset($config[$group]["permission"][$permId]); 
   $data->setAll($config);
   $data->save(); 
-  $tag = $config[$group]["tag"];
-  $messages = $plugin->getConfig();
-  $player->sendMessage(Loader::getProcessedTags(["{prefix}", "{group}", "{permission}"], [$messages->get("default.prefix"), $tag, $permission], $messages->getNested('commands.subcommands.removepermission.sucess', false)));  
   self::reloadPermissions();
  }
  
