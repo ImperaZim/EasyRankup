@@ -40,4 +40,4 @@ commands:
    sucess: "{prefix} §7Permission §e{permission}§7 has been sucessfully added to group §e{group}§7!"
    has_perm: "{prefix} §7Permission §e{permission} §7already exists in group §e{group}§7!"
   removepermission:
-   sucess: "{prefix} §7Permission §e{permission}§7 has been sucessfully removed from group §{group}§7!"
+   sucess: "{prefix} §7Permission §e{permission}§7 has been sucessfully removed from group §a{group}§7!"
