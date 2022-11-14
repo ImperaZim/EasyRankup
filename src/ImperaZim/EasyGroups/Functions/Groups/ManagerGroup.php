@@ -7,15 +7,18 @@ use ImperaZim\EasyGroups\Loader;
 use ImperaZim\EasyGroups\Utils\form\FormAPI;
 
 class ManagerGroup {
+ 
+ public static $saved = [];
 
  public static function execute($player, String $group) {
   $plugin = self::getPlugin();
   $config = new Config($plugin->getDataFolder() . "groups.yml");
   
   if(!isset($config->getAll()[$group])) return true;
-  
+  self::$saved["group"] = $group;
   $form = FormAPI::createCustomForm(function($player, $data = null) {
    if (is_null($data)) return true;
+   $group = self::$saved["group"];
    $plugin = self::getPlugin();
    $config = new Config($plugin->getDataFolder() . "groups.yml"); 
    $config->setNested("$group.tag", $data["tag"]);
