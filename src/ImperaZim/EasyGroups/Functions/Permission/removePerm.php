@@ -52,7 +52,7 @@ class removePerm {
   $config = $data->getAll();
   $form->setTitle("§cEasyGroups §7 » {$config[$group]['tag']}");
   $form->addLabel("§b"); 
-  if (count("permission"]) >= 1) {
+  if (count($config["permission"]) >= 1) {
   $form->addDropdown("§7Listed Permissions (select max \"1\")", $config[$group]["permission"], 0, "perm");
   }else{
    $form->addLabel("§7This group no have permissions!");
