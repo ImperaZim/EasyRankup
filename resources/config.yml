@@ -25,8 +25,8 @@ commands:
    help_message: "{prefix} §7Use /easygroup edit (name)"
   createcommand:
    sucess: "{prefix} §7Group §e{group} §7sucessfully created!"
-   failed: "{prefix} §7The group §and{group} §7already exists!"
-   failed_type: "{prefix} §7Type §and{type} §7does not exist!"
+   failed: "{prefix} §7The group §a{group} §7already exists!"
+   failed_type: "{prefix} §7Type §a{type} §7does not exist!"
   deletecommand:
    form_confirm: "§7Do you really want to delete group §e{group}§7 from your server?"
    sucess: "{prefix} §7The group {deleted_group} §7was deleted from the server, players with this group will have their group changed to {default_group}"
