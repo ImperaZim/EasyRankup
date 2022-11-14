@@ -25,7 +25,7 @@ class addPerm {
   $groups = new Config($plugin->getDataFolder() . "groups.yml");
   foreach ($groups->getAll() as $group => $data){
    if($array == "") {
-    $array .= $groups->getAll()[$group]["tag"] . "§r§7 (" . (count($groups->getAll()[$group]["permission"])) . "§7 ermissions)";
+    $array .= $groups->getAll()[$group]["tag"] . "§r§7 (" . (count($groups->getAll()[$group]["permission"])) . "§7 Permissions)";
    }else{
     $array .= "|" . $groups->getAll()[$group]["tag"] . "§r§7 (" . (count($groups->getAll()[$group]["permission"])) . "§7 Permissions)";
    }
