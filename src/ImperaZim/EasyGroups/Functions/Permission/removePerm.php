@@ -52,7 +52,7 @@ class removePerm {
   $form->addLabel("§b");
   $data = new Config($plugin->getDataFolder() . "groups.yml");
   $config = $data->getAll();
-  if (count($config["permission"]) >= 1) {
+  if (count($config[$group]["permission"]) >= 1) {
   $form->addDropdown("§7Listed Permissions (select max \"1\")", $config[$group]["permission"], 0, "perm");
   }else{
    $form->addLabel("§7This group no have permissions!");
