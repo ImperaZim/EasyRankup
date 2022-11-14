@@ -11,7 +11,6 @@ use ImperaZim\EasyGroups\Functions\Permission\Permission;
 class UpdatePermissions {
 
  public static $data = [];
- private $attachment = [];
 
  public static function execute($player) : void {
   $plugin = Loader::getInstance();
