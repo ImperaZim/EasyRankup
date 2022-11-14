@@ -3,7 +3,7 @@
 
 A plugin for you to define groups and roles for players and permissions for these roles easily! <br> **[Download phar]()** ``soon``
 - - - -
-## Compatibility
+## Compatibility 
 This plugin is meant to be used on servers made only in the software **[PocketMine-MP](https://github.com/pmmp/PocketMine-MP)**, it may not work perfectly in variants of it.
 
 ## Commands:
@@ -23,7 +23,7 @@ This plugin is meant to be used on servers made only in the software **[PocketMi
 ```php 
 use ImperaZim\EasyGroups\Loader as API;
 ```
-###Get player group prefix
+### Get player group prefix
 ```php
 API::ImportPrefixByPlayer($player); // example return "Player"
 ```
