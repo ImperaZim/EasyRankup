@@ -22,16 +22,7 @@ This plugin is meant to be used on servers made only in the software **[PocketMi
 ## EasyGroups API
 ```php 
 use ImperaZim\EasyGroups\Loader as API;
-```
-### Get player group prefix
-```php
 API::ImportPrefixByPlayer($player); // example return "Player"
-```
-### Get player group tag
-```php
 API::ImportTagByPlayer($player); // example return "[Player]"
-```
-### Get player tag type
-```php
 API::ImportTypeByPrefix(API::ImportPrefixByPlayer($player)); // example return "normal"
 ```
