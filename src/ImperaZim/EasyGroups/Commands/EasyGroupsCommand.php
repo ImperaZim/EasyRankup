@@ -77,8 +77,7 @@ class EasyGroupsCommand extends Command implements PluginOwned {
      return;
     }
     $player->sendMessage(Loader::getProcessedTags(["{prefix}"], [$plugin->getConfig()->get("default.prefix")], "{prefix} §7SOON!!!"));
-    return; 
-    ManagerGroup::execute($player, (string) $args[1]);
+    //ManagerGroup::execute($player, (string) $args[1]);
     return; 
    }
    if (in_array($args[0], ["criar", "create"])) {
