@@ -53,7 +53,7 @@ class removePerm {
   $data = new Config($plugin->getDataFolder() . "groups.yml");
   $config = $data->getAll();
   if (count($config["permission"]) >= 1) {
-  $form->addDropdown("§7Listed Permissions (select max \"1\")", $groups->getAll()[$group]["permission"], 0, "perm");
+  $form->addDropdown("§7Listed Permissions (select max \"1\")", $config[$group]["permission"], 0, "perm");
   }else{
    $form->addLabel("§7This group no have permissions!");
   }
@@ -69,7 +69,8 @@ class removePerm {
   $data->setAll($config);
   $data->save(); 
   $tag = $config[$group]["tag"];
-  $player->sendMessage(Loader::getProcessedTags(["{prefix}", "{group}", "{permission}"], [$messagem->get("default.prefix"), $tag, $permission], $messagem->getNested('commands.subcommands.removepermission.sucess', false)));  
+  $messages = $plugin->getConfig();
+  $player->sendMessage(Loader::getProcessedTags(["{prefix}", "{group}", "{permission}"], [$messages->get("default.prefix"), $tag, $permission], $messages->getNested('commands.subcommands.removepermission.sucess', false)));  
   self::reloadPermissions();
  }
  
