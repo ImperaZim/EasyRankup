@@ -16,4 +16,5 @@ This plugin is meant to be used on servers made only in the software **[PocketMi
 - set: /easygroups set
 - list: /easygroups list
 - edit: /easygroups edit
-
+- addperm: /easygroups addperm
+- removeperm: /easygroups removeperm
