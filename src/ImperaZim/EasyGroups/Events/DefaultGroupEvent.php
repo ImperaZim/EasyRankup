@@ -7,7 +7,7 @@ use pocketmine\event\player\PlayerJoinEvent;
 use ImperaZim\EasyGroups\Functions\Storage\SQLite3;
 use ImperaZim\EasyGroups\Functions\Permission\UpdatePermissions; 
 
-class DeafultGroupEvent implements Listener {
+class DefultGroupEvent implements Listener {
 
  public function Event(PlayerJoinEvent $event) {
   SQLite3::createProfile($event->getPlayer());
