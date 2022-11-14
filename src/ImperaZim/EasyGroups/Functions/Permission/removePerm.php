@@ -23,9 +23,9 @@ class removePerm {
   $groups = new Config($plugin->getDataFolder() . "groups.yml");
   foreach ($groups->getAll() as $group => $data){
    if($array == "") {
-    $array .= $groups->getAll()[$group]["tag"] . "§r§7 (" . (count($groups->getAll()[$group]["permission"]) ?? 0) . " §7Permissions)";
+    $array .= $groups->getAll()[$group]["tag"] . "§r§7 (" . (count($groups->getAll()[$group]["permission"])) . " §7Permissions)";
    }else{
-    $array .= "|" . $groups->getAll()[$group]["tag"] . "§r§7 (" . (count($groups->getAll()[$group]["permission"]) ?? 0) . " §7Permissions)";
+    $array .= "|" . $groups->getAll()[$group]["tag"] . "§r§7 (" . (count($groups->getAll()[$group]["permission"])) . " §7Permissions)";
    }
   }
   $groups = explode("|", $array);
@@ -62,7 +62,7 @@ class removePerm {
  }
  
  public static function removePermission($player, $group, $permId) {
-  
+  $plugin = Loader::getInstance(); 
   $data = new Config($plugin->getDataFolder() . "groups.yml");
   $config = $data->getAll(); 
   unset($config[$group]["permission"][$permId]); 
