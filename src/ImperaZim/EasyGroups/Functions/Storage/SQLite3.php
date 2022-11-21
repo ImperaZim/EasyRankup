@@ -25,7 +25,9 @@ class SQLite3 {
   $name = $player->getName();
   $data = self::table();
   $loader = Loader::getInstance();
-  $perfil = $data->prepare("INSERT INTO profile(name, tag) VALUES ('{$name}', '{$default}')");
+  $perfil = $data->prepare("INSERT INTO profile(name, tag) VALUES (':name', ':tag')");
+  $perfil->bindValue(":name", $name); 
+  $perfil->bindValue(":tag", $default);
   if (!self::exist($player)) {
    $perfil->execute();
    $loader->getLogger()->notice("New player \"{$player->getName()}\" group status as \"{$default}\"");
