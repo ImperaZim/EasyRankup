@@ -29,7 +29,7 @@ class EasyGroupsCommand extends Command implements PluginOwned {
    self::getServer()->getLogger()->error("This command can only be used in the game");
    return true;
   }
-  if(!$player->hasPermission("easygroups.operator.use")){
+  if(!$player->hasPermission("easygroups.op")){
    $player->sendMessage(Loader::getProcessedTags(["{prefix}"], [Loader::getInstance()->getConfig()->get("default.prefix")], Loader::getInstance()->getConfig()->getNested('commands.no_permission', false))); 
    return true;
   }
