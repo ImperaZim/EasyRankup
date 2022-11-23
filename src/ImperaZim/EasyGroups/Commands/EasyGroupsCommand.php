@@ -22,7 +22,6 @@ class EasyGroupsCommand extends Command implements PluginOwned {
 
  public function __construct() {
   parent::__construct("easygroups", "§7Groups manager!", null, ["eg", "tag", "group"]);
-  $this->setPermission("easygroups.operator.use");
  }
 
  public function execute(CommandSender $player, string $commandLabel, array $args) : bool {
@@ -31,7 +30,7 @@ class EasyGroupsCommand extends Command implements PluginOwned {
    return true;
   }
   if(!$player->hasPermission("easygroups.operator.use")){
-   $player->sendMessage(Loader::getProcessedTags(["{prefix}"], [Loader::getInstance()->getConfig()->get("default.prefix")], Loader::getInstance()->getConfig() ->getNested('commands.no_permission', false))); 
+   $player->sendMessage(Loader::getProcessedTags(["{prefix}"], [Loader::getInstance()->getConfig()->get("default.prefix")], Loader::getInstance()->getConfig()->getNested('commands.no_permission', false))); 
    return true;
   }
   self::subcommands($player, $args);
