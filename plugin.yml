@@ -5,7 +5,5 @@ api: [4.0.0]
 main: ImperaZim\EasyGroups\Loader
 
 permissions:
-  easygroups.player.use:
-    default: true
-  easygroups.operator.use:
+  easygroups.op:
     default: op
