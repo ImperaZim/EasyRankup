@@ -42,7 +42,7 @@ class CreateGroup {
    }
    $player->sendMessage(Loader::getProcessedTags(["{prefix}", "{group}"], [$messagem->get("default.prefix"), $prefix], $messagem->getNested('commands.subcommands.createcommand.sucess', false)));
    if($type == "vip"){
-    $permission = ["chat.colored.format"];
+    $permission = ["easygroups.colored.format"];
    }else{
     $permission = [];
    }
