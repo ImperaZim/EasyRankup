@@ -13,7 +13,7 @@ class ChatGroupEvent implements Listener {
  public function Event(PlayerChatEvent $event) {
   $player = $event->getPlayer();
   $message = $event->getMessage();
-  if(!$player->hasPermission("chat.colored.format")){
+  if(!$player->hasPermission("easygroups.colored.format")){
    $colors = ["§", "&"];
    $message = str_replace($colors, [""], $message);
   }
