@@ -7,3 +7,5 @@ main: ImperaZim\EasyGroups\Loader
 permissions:
   easygroups.op:
     default: op
+  easygroups.colored.format:
+    default: false
