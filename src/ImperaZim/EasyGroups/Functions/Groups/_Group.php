@@ -10,7 +10,7 @@ use ImperaZim\EasyGroups\Functions\Storage\SQLite3;
 class _Group {
 
  public static function get(Player $player) {
-  $data = SQLite3::table()->query("SELECT tag FROM profile WHERE name='" . $player->getName() . "'"); 
+  $data = SQLite3::table()->query("SELECT tag FROM profile WHERE name=".$player->getName().";"); 
   $plugin = Loader::getInstance();
   $data = $data->fetchArray(SQLITE3_ASSOC);
   $tag = $data['tag'] ?? SQLITE3::default();
@@ -19,7 +19,7 @@ class _Group {
   }
 
   public static function set(Player $player, String $group) : void {
-   SQLite3::table()->query("UPDATE profile SET tag='" . $group . "' WHERE name='" . $player->getName() . "'"); 
+   SQLite3::table()->query("UPDATE profile SET tag=".$group." WHERE name=".$player->getName().";"); 
   }
 
   public static function default () : void {
