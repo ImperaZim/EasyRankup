@@ -20,7 +20,7 @@ class UpdateGroup {
   $messagem = $plugin->getConfig(); 
   $config = new Config($plugin->getDataFolder() . "groups.yml");
   if (isset($config->getAll()[$group])) {
-   SQLite3::table()->query("UPDATE profile SET tag=".$group." WHERE name=".$name.";");
+   SQLite3::table()->query("UPDATE profile SET tag='" . $group . "' WHERE name='" . $name . "';");
    $tag = $config->getAll()[$group]["tag"];
    $author->sendMessage(Loader::getProcessedTags(["{prefix}", "{target}", "{group}"], [$plugin->getConfig()->get("default.prefix"), $name, $tag], $messagem->getNested('commands.subcommands.setcommand.author_sucess', false))); 
    $player->sendMessage(Loader::getProcessedTags(["{prefix}", "{group}"], [$plugin->getConfig()->get("default.prefix"), $tag], $messagem->getNested('commands.subcommands.setcommand.target_sucess', false))); 
