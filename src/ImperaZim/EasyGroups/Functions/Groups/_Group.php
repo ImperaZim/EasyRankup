@@ -19,7 +19,7 @@ class _Group {
   }
 
   public static function set(Player $player, String $group) : void {
-   SQLite3::table()->query("UPDATE profile SET tag='".SQLite3::table()->real_escape_string($group)."' WHERE name='".SQLite3::table()->real_escape_string($player->getName())."'"); 
+   SQLite3::table()->query("UPDATE profile SET tag='" . $group . "' WHERE name='" . $player->getName() . "'"); 
   }
 
   public static function default () : void {
