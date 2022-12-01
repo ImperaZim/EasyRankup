@@ -10,7 +10,7 @@ use ImperaZim\EasyGroups\Functions\Storage\SQLite3;
 class _Group {
 
  public static function get(Player $player) {
-  $data = SQLite3::table()->query("SELECT tag FROM profile WHERE name='".SQLite3::table()->real_escape_string($player->getName())."'"); 
+  $data = SQLite3::table()->query("SELECT tag FROM profile WHERE name='" . $player->getName() . "'"); 
   $plugin = Loader::getInstance();
   $data = $data->fetchArray(SQLITE3_ASSOC);
   $tag = $data['tag'] ?? SQLITE3::default();
