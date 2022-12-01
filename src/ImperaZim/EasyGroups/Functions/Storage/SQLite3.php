@@ -37,7 +37,7 @@ class SQLite3 {
  public static function exist(Player $player) {
   $data = self::table();
   $loader = Loader::getInstance();
-  $data = $data->query("SELECT name FROM profile WHERE name='".$data->real_escape_string($player->getName())."'");
+  $data = $data->query("SELECT name FROM profile WHERE name='" . $player->getName() . "'");
   $data = $data->fetchArray(SQLITE3_ASSOC);
   if(isset($data['name'])) return true;
   return false;
