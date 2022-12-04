@@ -25,7 +25,7 @@ class SQLite3 {
   $name = $player->getName();
   $data = self::table();
   $loader = Loader::getInstance();
-  $perfil = $data->prepare("INSERT INTO profile(name, tag) VALUES (':name', ':tag')");
+  $perfil = $data->prepare("INSERT INTO profile(name, tag) VALUES (:name, :tag)");
   $perfil->bindValue(":name", $name); 
   $perfil->bindValue(":tag", $default);
   if (!self::exist($player)) {
