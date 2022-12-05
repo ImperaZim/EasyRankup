@@ -29,8 +29,12 @@ class Loader extends PluginBase {
   SQLite3::createTable();
   self::registerEvents();
   self::registerCommandMap();
-  self::registerRepeatingTask();
   _Group::loadGroups();
+  AsyncTask::register($this, new AsyncTask());
+ }
+
+ public function onDisable() : void {
+  (new AsyncTask())->unregister();
  }
 
   public static function registerEvents() : void {
@@ -48,10 +52,6 @@ class Loader extends PluginBase {
    foreach ($commands as $command) {
     Server::getInstance()->getCommandMap()->register("EasyGroups", $command);
    }
-  }
-
-  public static function registerRepeatingTask() : void {
-   self::$instance->getScheduler()->scheduleRepeatingTask(new AsyncTask(), 5);
   }
   
   public static function getProcessedTags(array $tag, array $processed, String $message) : String {
