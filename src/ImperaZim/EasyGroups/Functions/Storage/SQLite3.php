@@ -30,14 +30,13 @@ class SQLite3 {
   $perfil->bindValue(":tag", $default);
   if (!self::exist($player)) {
    $perfil->execute();
-   $loader->getLogger()->notice("New player \"{$player->getName()}\" group status as \"{$default}\"");
   }  
  }
  
  public static function exist(Player $player) {
   $data = self::table();
   $loader = Loader::getInstance();
-  $data = $data->query("SELECT name FROM profile WHERE name='" . $player->getName() . "';");
+  $data = $data->query("SELECT name FROM profile WHERE name='" . $data->escapeString($player->getName()) . "';");
   $data = $data->fetchArray(SQLITE3_ASSOC);
   if(isset($data['name'])) return true;
   return false;
