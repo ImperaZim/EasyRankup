@@ -85,7 +85,7 @@ class DeleteGroup {
    unset($config[$group]);
    $data->setAll($config);
    $data->save();
-   SQLite3::table()->query("UPDATE profile SET tag='" . $def . "' WHERE tag='" . $group . "';");
+   SQLite3::table()->query("UPDATE profile SET tag='" . $data->escapeString($def) . "' WHERE tag='" . $data->escapeString($group) . "';");
    $player->sendMessage(Loader::getProcessedTags(["{prefix}", "{deleted_group}", "{default_group}"], [$messagem->get("default.prefix"), $deleted_tag, $default_tag], $messagem->getNested('commands.subcommands.deletecommand.sucess', false))); 
   }else{
    $player->sendMessage(Loader::getProcessedTags(["{prefix}", "{group}"], [$messagem->get("default.prefix"), $deleted_tag], $messagem->getNested('commands.subcommands.deletecommand.group_no_exist', false))); 
