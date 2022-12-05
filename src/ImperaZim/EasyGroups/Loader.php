@@ -74,7 +74,6 @@ class Loader extends PluginBase {
   }
   
   public function disable() : void {
-   $this->getLogger()->warning("The \"groups.yml\" file structure is not working perfectly.");
    $this->getServer()->getPluginManager()->disablePlugin($this);
   }
 
