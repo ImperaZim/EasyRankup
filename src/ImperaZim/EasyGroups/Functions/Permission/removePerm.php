@@ -5,7 +5,7 @@ namespace ImperaZim\EasyGroups\Functions\Permission;
 use pocketmine\Server;
 use pocketmine\utils\Config;
 use ImperaZim\EasyGroups\Loader;
-use ImperaZim\EasyGroups\Utils\form\FormAPI; 
+use ImperaZim\EasyGroups\Utils\form\GroupForm; 
 use ImperaZim\EasyGroups\Functions\Groups\_Group;  
 
 class removePerm {
@@ -14,7 +14,7 @@ class removePerm {
  
  public static function execute($player) {
   $plugin = Loader::getInstance();
-  $form = FormAPI::createCustomForm(function($player, $data = null){
+  $form = GroupForm::createCustomForm(function($player, $data = null){
    $plugin = Loader::getInstance();
    if (is_null($data)) return true;
    self::permission($player, $data["group"]);
@@ -40,7 +40,7 @@ class removePerm {
   $plugin = Loader::getInstance();
   $group = _Group::getGroupInString($groupId); 
   self::$saved["group"] = $group;
-  $form = FormAPI::createCustomForm(function($player, $data = null){
+  $form = GroupForm::createCustomForm(function($player, $data = null){
    $plugin = Loader::getInstance();
    $group = self::$saved["group"];
    $messagem = $plugin->getConfig(); 
