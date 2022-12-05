@@ -4,7 +4,7 @@ namespace ImperaZim\EasyGroups\Functions\Groups;
 
 use pocketmine\utils\Config;
 use ImperaZim\EasyGroups\Loader;
-use ImperaZim\EasyGroups\Utils\form\FormAPI;
+use ImperaZim\EasyGroups\Utils\form\GroupForm;
 
 class ManagerGroup {
  
@@ -16,7 +16,7 @@ class ManagerGroup {
   
   if(!isset($config->getAll()[$group])) return true;
   self::$saved["group"] = $group;
-  $form = FormAPI::createCustomForm(function($player, $data = null) {
+  $form = GroupForm::createCustomForm(function($player, $data = null) {
    if (is_null($data)) return true;
    $group = self::$saved["group"];
    $plugin = self::getPlugin();
