@@ -5,7 +5,7 @@ namespace ImperaZim\EasyGroups\Utils\form;
 use ImperaZim\EasyGroups\Utils\form\types\ModalForm;
 use ImperaZim\EasyGroups\Utils\form\types\CustomForm;
 
-class FormAPI {
+class GroupForm {
  
  public static function createCustomForm(?callable $function = null) : CustomForm {
   return new CustomForm($function);
