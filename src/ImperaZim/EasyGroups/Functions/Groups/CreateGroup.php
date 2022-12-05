@@ -5,14 +5,14 @@ namespace ImperaZim\EasyGroups\Functions\Groups;
 use pocketmine\Server;
 use pocketmine\utils\Config;
 use ImperaZim\EasyGroups\Loader;
-use ImperaZim\EasyGroups\Utils\form\FormAPI;
+use ImperaZim\EasyGroups\Utils\form\GroupForm;
 
 class CreateGroup {
 
  public static function execute($player) {
   $plugin = self::getPlugin();
   $server = self::getServer();
-  $form = FormAPI::createCustomForm(function($player, $data = null){
+  $form = GroupForm::createCustomForm(function($player, $data = null){
    if (is_null($data)) return true;
    $name = isset($data["name"]) ? $data["name"] : "Unknow";
    $tag = isset($data["tag"]) ? $data["tag"] : "Unknow";
