@@ -4,7 +4,7 @@ namespace ImperaZim\EasyGroups\Functions\Groups;
 
 use pocketmine\utils\Config;
 use ImperaZim\EasyGroups\Loader;
-use ImperaZim\EasyGroups\Utils\form\GroupForm;
+use ImperaZim\EasyGroups\Utils\form\FormAPI as GroupForm;
 
 class ManagerGroup {
  
