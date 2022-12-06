@@ -5,7 +5,7 @@ namespace ImperaZim\EasyGroups\Functions\Permission;
 use pocketmine\Server;
 use pocketmine\utils\Config;
 use ImperaZim\EasyGroups\Loader;
-use ImperaZim\EasyGroups\Utils\form\GroupForm; 
+use ImperaZim\EasyGroups\Utils\Form\FormAPI; 
 use ImperaZim\EasyGroups\Functions\Groups\_Group;  
 use ImperaZim\EasyGroups\Functions\Permission\UpdatePermissions;  
 
@@ -15,7 +15,7 @@ class addPerm {
  
  public static function execute($player) {
   $plugin = Loader::getInstance();
-  $form = GroupForm::createCustomForm(function($player, $data = null){
+  $form = FormAPI::createCustomForm(function($player, $data = null){
    $plugin = Loader::getInstance();
    if (is_null($data)) return true;
    self::permission($player, $data["group"]);
@@ -42,7 +42,7 @@ class addPerm {
   $plugin = Loader::getInstance();
   $group = _Group::getGroupInString($groupId);
   self::$saved["group"] = $group;
-  $form = GroupForm::createCustomForm(function($player, $data = null){
+  $form = FormAPI::createCustomForm(function($player, $data = null){
    $plugin = Loader::getInstance();
    $group = self::$saved["group"];
    $messagem = $plugin->getConfig(); 
