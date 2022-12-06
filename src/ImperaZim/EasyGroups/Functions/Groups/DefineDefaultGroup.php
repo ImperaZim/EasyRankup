@@ -5,7 +5,7 @@ namespace ImperaZim\EasyGroups\Functions\Groups;
 use pocketmine\Server;
 use pocketmine\utils\Config;
 use ImperaZim\EasyGroups\Loader;
-use ImperaZim\EasyGroups\Utils\form\FormAPI;
+use ImperaZim\EasyGroups\Utils\Form\FormAPI;
 use ImperaZim\EasyGroups\Functions\Groups\_Group; 
 use ImperaZim\EasyGroups\Functions\Storage\SQLite3; 
 
