@@ -5,7 +5,7 @@ namespace ImperaZim\EasyGroups\Functions\Groups;
 use pocketmine\Server;
 use pocketmine\utils\Config;
 use ImperaZim\EasyGroups\Loader;
-use ImperaZim\EasyGroups\Utils\form\FormAPI as GroupForm;
+use ImperaZim\EasyGroups\Utils\form\FormAPI;
 use ImperaZim\EasyGroups\Functions\Groups\_Group; 
 use ImperaZim\EasyGroups\Functions\Storage\SQLite3; 
 
@@ -15,7 +15,7 @@ class DeleteGroup {
 
  public static function execute($player) {
   $plugin = self::getPlugin();
-  $form = GroupForm::createCustomForm(function($player, $data = null){
+  $form = FormAPI::createCustomForm(function($player, $data = null){
    $plugin = self::getPlugin();
    if (is_null($data)) return true;
    self::confirm($player, $data["group"]);
@@ -43,7 +43,7 @@ class DeleteGroup {
   $messagem = $plugin->getConfig();
   self::$saved["group"] = $group; 
   $group = _Group::getGroupInString($group); 
-  $form = GroupForm::createModalForm(function($player, $data = null){
+  $form = FormAPI::createModalForm(function($player, $data = null){
    $plugin = self::getPlugin();
    if (is_null($data)) return true; 
    if ($data == true) {
