@@ -23,8 +23,38 @@ class ChatGroupEvent implements Listener {
   $group = _Group::get($player);
   $tag = $config->getAll()[$group]["tag"] ?? "[]";
   $chat = $config->getAll()[$group]["chat"] ?? "{tag} {name}: {message}";
-  $format = Loader::getProcessedTags(["{tag}", "{name}", "{message}"], [$tag, $name, $message], $chat);
+  $clan = $this->getClan($player);
+  $rank = $this->getRank($player);
+  $format = Loader::getProcessedTags(["{tag}", "{name}", "{message}", "{clan}", "{rank}"], [$tag, $name, $message, $clan, $rank], $chat);
   $event->setFormat($format);
+ }
+ 
+ public function getRank($player) {
+  $plugin = Loader::getInstance(); 
+  $r = $plugin->getServer()->getPluginManager()->getPlugin("RankUP");
+  if ($r == null) {
+   return "no-plugin";
+  }
+  if ($r->getDescription()->getAuthors()[0] == "uTalDoVic") {
+   return $plugin->rank->get($player->getName()) ?? "[+]";
+  }
+  if ($r->getDescription()->getAuthors()[0] == "ImperaZim") {
+   return ""; //$plugin->getRank()->getTag($player)
+  }
+ }
+ 
+ public function getClan($player) {
+  $plugin = Loader::getInstance(); 
+  $c = $plugin->getServer()->getPluginManager()->getPlugin("Clan");
+  if ($c == null) {
+   return "no-plugin";
+  }
+  if ($c->getDescription()->getAuthors()[0] == "uTalDoVic") {
+   return $plugin->getTag($plugin->getClan($player)) ?? "no-clan";
+  }
+  if ($r->getDescription()->getAuthors()[0] == "ImperaZim") {
+   return ""; //$plugin->getClan()->getCompactTag($player->getClan())
+  }
  }
 
 }  
