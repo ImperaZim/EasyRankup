@@ -36,10 +36,10 @@ class ChatGroupEvent implements Listener {
    return "no-plugin";
   }
   if ($r->getDescription()->getAuthors()[0] == "uTalDoVic") {
-   return $plugin->rank->get($player->getName()) ?? "[+]";
+   return $r->rank->get($player->getName()) ?? "[+]";
   }
   if ($r->getDescription()->getAuthors()[0] == "ImperaZim") {
-   return ""; //$plugin->getRank()->getTag($player)
+   return ""; //$r->getRank()->getTag($player)
   }
  }
  
@@ -50,10 +50,10 @@ class ChatGroupEvent implements Listener {
    return "no-plugin";
   }
   if ($c->getDescription()->getAuthors()[0] == "uTalDoVic") {
-   return $plugin->getTag($plugin->getClan($player)) ?? "no-clan";
+   return $c->getTag($r->getClan($player)) ?? "no-clan";
   }
-  if ($r->getDescription()->getAuthors()[0] == "ImperaZim") {
-   return ""; //$plugin->getClan()->getCompactTag($player->getClan())
+  if ($c->getDescription()->getAuthors()[0] == "ImperaZim") {
+   return ""; //$c->getClan()->getCompactTag($player->getClan())
   }
  }
 
