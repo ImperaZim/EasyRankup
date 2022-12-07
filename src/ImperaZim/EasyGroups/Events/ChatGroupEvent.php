@@ -35,10 +35,13 @@ class ChatGroupEvent implements Listener {
   if ($r == null) {
    return "no-plugin";
   }
-  if ($r->getDescription()->getAuthors()[0] == "uTalDoVic") {
+  $author = $r->getDescription()->getAuthors()[0];
+  $authors = explode(" ", $author);
+  $author = isset($authors[1]) ? $authors[0] : $author; 
+  if ($author == "uTalDoVic") {
    return $r->rank->get($player->getName()) ?? "[+]";
   }
-  if ($r->getDescription()->getAuthors()[0] == "ImperaZim") {
+  if ($author == "ImperaZim") {
    return ""; //$r->getRank()->getTag($player)
   }
  }
@@ -49,10 +52,13 @@ class ChatGroupEvent implements Listener {
   if ($c == null) {
    return "no-plugin";
   }
-  if ($c->getDescription()->getAuthors()[0] == "uTalDoVic") {
+  $author = $c->getDescription()->getAuthors()[0];
+  $authors = explode(" ", $author);
+  $author = isset($authors[1]) ? $authors[0] : $author;
+  if ($author == "uTalDoVic") {
    return $c->getTag($r->getClan($player)) ?? "no-clan";
   }
-  if ($c->getDescription()->getAuthors()[0] == "ImperaZim") {
+  if ($author == "ImperaZim") {
    return ""; //$c->getClan()->getCompactTag($player->getClan())
   }
  }
