@@ -50,7 +50,7 @@ class ChatGroupEvent implements Listener {
    return "no-plugin";
   }
   if ($c->getDescription()->getAuthors()[0] == "uTalDoVic") {
-   return $c->getTag($plugin->getClan($player)) ?? "no-clan";
+   return $c->getTag($c->getClan($player)) ?? "no-clan";
   }
   if ($r->getDescription()->getAuthors()[0] == "ImperaZim") {
    return ""; //$c->getClan()->getCompactTag($player->getClan())
