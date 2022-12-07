@@ -33,10 +33,12 @@ class ChatGroupEvent implements Listener {
   $plugin = Loader::getInstance(); 
   $r = $plugin->getServer()->getPluginManager()->getPlugin("RankUP");
   if ($r != null) {
-   if ($r->getDescription()->getAuthors()[0] == "uTalDoVic") {
+   $authors = explode(" ", $r->getDescription()->getAuthors()[0]);
+   $author = isset($authors[1]) ? $authors[0] : $r->getDescription()->getAuthors()[0];  
+   if ($author == "uTalDoVic") {
     return $r->rank->get($player->getName()) ?? "[+]";
    }
-   if ($r->getDescription()->getAuthors()[0] == "ImperaZim") {
+   if ($author == "ImperaZim") {
     return "";
    }
   }
@@ -47,14 +49,18 @@ class ChatGroupEvent implements Listener {
   $plugin = Loader::getInstance(); 
   $c = $plugin->getServer()->getPluginManager()->getPlugin("Clan");
   if ($c == null) {
-   if ($c->getDescription()->getAuthors()[0] == "uTalDoVic") {
+   $authors = explode(" ", $r->getDescription()->getAuthors()[0]);
+   $author = isset($authors[1]) ? $authors[0] : $r->getDescription()->getAuthors()[0];  
+   if ($author == "uTalDoVic") {
     return $c->getTag($c->getClan($player)) ?? "no-clan";
    }
-   if ($r->getDescription()->getAuthors()[0] == "ImperaZim") {
+   if ($author == "ImperaZim") {
     return "";
    }
   }
   return "no-plugin";
  } 
+ 
+ 
 
 }  
