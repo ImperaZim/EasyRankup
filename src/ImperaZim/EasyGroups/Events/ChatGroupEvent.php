@@ -35,12 +35,10 @@ class ChatGroupEvent implements Listener {
   if ($r == null) {
    return "no-plugin";
   }
-  $authors = explode(" ", $r->getDescription()->getAuthors()[0]);
-  $author = isset($authors[1]) ? $authors[0] : $r->getDescription()->getAuthors()[0]; 
-  if ($author == "uTalDoVic") {
+  if ($r->getDescription()->getAuthors()[0] == "uTalDoVic") {
    return $r->rank->get($player->getName()) ?? "[+]";
   }
-  if ($author == "ImperaZim") {
+  if ($r->getDescription()->getAuthors()[0] == "ImperaZim") {
    return ""; //$r->getRank()->getTag($player)
   }
  }
@@ -51,13 +49,11 @@ class ChatGroupEvent implements Listener {
   if ($c == null) {
    return "no-plugin";
   }
-  $authors = explode(" ", $c->getDescription()->getAuthors()[0]);
-  $author = isset($authors[1]) ? $authors[0] : $c->getDescription()->getAuthors()[0]; 
-  if ($author == "uTalDoVic") {
-   return $c->getTag($c->getClan($player)) ?? "no-clan";
+  if ($c->getDescription()->getAuthors()[0] == "uTalDoVic") {
+   return $c->getTag($r->getClan($player)) ?? "no-clan";
   }
-  if ($author == "ImperaZim") {
-   return ""; //$c->getClan()->getCompactTag($player- >getClan())
+  if ($c->getDescription()->getAuthors()[0] == "ImperaZim") {
+   return ""; //$c->getClan()->getCompactTag($player->getClan())
   }
  }
 
