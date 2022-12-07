@@ -32,29 +32,29 @@ class ChatGroupEvent implements Listener {
  public function getRank($player) {
   $plugin = Loader::getInstance(); 
   $r = $plugin->getServer()->getPluginManager()->getPlugin("RankUP");
-  if ($r == null) {
-   return "no-plugin";
+  if ($r != null) {
+   if ($r->getDescription()->getAuthors()[0] == "uTalDoVic") {
+    return $r->rank->get($player->getName()) ?? "[+]";
+   }
+   if ($r->getDescription()->getAuthors()[0] == "ImperaZim") {
+    return "";
+   }
   }
-  if ($r->getDescription()->getAuthors()[0] == "uTalDoVic") {
-   return $r->rank->get($player->getName()) ?? "[+]";
-  }
-  if ($r->getDescription()->getAuthors()[0] == "ImperaZim") {
-   return ""; //$r->getRank()->getTag($player)
-  }
+  return "no-plugin";
  }
  
  public function getClan($player) {
   $plugin = Loader::getInstance(); 
   $c = $plugin->getServer()->getPluginManager()->getPlugin("Clan");
   if ($c == null) {
-   return "no-plugin";
+   if ($c->getDescription()->getAuthors()[0] == "uTalDoVic") {
+    return $c->getTag($c->getClan($player)) ?? "no-clan";
+   }
+   if ($r->getDescription()->getAuthors()[0] == "ImperaZim") {
+    return "";
+   }
   }
-  if ($c->getDescription()->getAuthors()[0] == "uTalDoVic") {
-   return $c->getTag($c->getClan($player)) ?? "no-clan";
-  }
-  if ($r->getDescription()->getAuthors()[0] == "ImperaZim") {
-   return ""; //$c->getClan()->getCompactTag($player->getClan())
-  }
+  return "no-plugin";
  } 
 
 }  
