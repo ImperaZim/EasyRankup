@@ -38,11 +38,45 @@ class AsyncTask extends Task {
    if(isset($config->getAll()[$group])){
     $tag = $config->getAll()[$group]["tag"] ?? "[]";
     $nametag = $config->getAll()[$group]["nametag"] ?? "{tag} {name}";
-    $nametag = Loader::getProcessedTags(["{tag}", "{name}"], [$tag, $name], $nametag);
+    $rank = $this->getRank($player);
+    $clan = $this->getClan($player);
+    $nametag = Loader::getProcessedTags(["{tag}", "{name}", "{rank}", "{clan}"], [$tag, $name, $rank, $clan], $nametag);
     $player->setNameTag($nametag);
    }
   } 
   
  }
+ 
+ public function getRank($player) {
+  $plugin = Loader::getInstance(); 
+  $r = $plugin->getServer()->getPluginManager()->getPlugin("RankUP");
+  if ($r != null) {
+   $authors = explode(" ", $r->getDescription()->getAuthors()[0]);
+   $author = isset($authors[1]) ? $authors[0] : $r->getDescription()->getAuthors()[0];  
+   if ($author == "uTalDoVic") {
+    return $r->rank->get($player->getName()) ?? "[+]";
+   }
+   if ($author == "ImperaZim") {
+    return "";
+   }
+  }
+  return "no-plugin";
+ }
+ 
+ public function getClan($player) {
+  $plugin = Loader::getInstance(); 
+  $c = $plugin->getServer()->getPluginManager()->getPlugin("Clan");
+  if ($c == null) {
+   $authors = explode(" ", $r->getDescription()->getAuthors()[0]);
+   $author = isset($authors[1]) ? $authors[0] : $r->getDescription()->getAuthors()[0];  
+   if ($author == "uTalDoVic") {
+    return $c->getTag($c->getClan($player)) ?? "no-clan";
+   }
+   if ($author == "ImperaZim") {
+    return "";
+   }
+  }
+  return "no-plugin";
+ }  
  
 }
