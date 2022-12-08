@@ -60,7 +60,5 @@ class ChatGroupEvent implements Listener {
   }
   return "no-plugin";
  } 
- 
- 
 
 }  
