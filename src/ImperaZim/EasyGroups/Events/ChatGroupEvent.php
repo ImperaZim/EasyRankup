@@ -32,33 +32,19 @@ class ChatGroupEvent implements Listener {
  public function getRank($player) {
   $plugin = Loader::getInstance(); 
   $r = $plugin->getServer()->getPluginManager()->getPlugin("RankUP");
-  if ($r != null) {
-   $authors = explode(" ", $r->getDescription()->getAuthors()[0]);
-   $author = isset($authors[1]) ? $authors[0] : $r->getDescription()->getAuthors()[0];  
-   if ($author == "uTalDoVic") {
-    return $r->rank->get($player->getName()) ?? "[+]";
-   }
-   if ($author == "ImperaZim") {
-    return "";
-   }
+  if ($r == null) {
+   return "no-plugin";
   }
-  return "no-plugin";
+  return $r->rank->get($player->getName()) ?? "[+]";
  }
  
  public function getClan($player) {
   $plugin = Loader::getInstance(); 
   $c = $plugin->getServer()->getPluginManager()->getPlugin("Clan");
   if ($c == null) {
-   $authors = explode(" ", $r->getDescription()->getAuthors()[0]);
-   $author = isset($authors[1]) ? $authors[0] : $r->getDescription()->getAuthors()[0];  
-   if ($author == "uTalDoVic") {
-    return $c->getTag($c->getClan($player)) ?? "no-clan";
-   }
-   if ($author == "ImperaZim") {
-    return "";
-   }
+   return "no-plugin";
   }
-  return "no-plugin";
+  return $c->getTag($c->getClan($player)) ?? "no-clan";
  } 
 
 }  
