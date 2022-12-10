@@ -10,6 +10,9 @@ use ImperaZim\EasyGroups\Functions\Groups\_Group;
 
 class ChatGroupEvent implements Listener {
  
+ public $clan = null;
+ public $rankup = null;
+ 
  public function __construct() {
   $clan = Loader::getInstance()->getServer()->getPluginManager()->getPlugin("Clan");
   $rankup = Loader::getInstance()->getServer()->getPluginManager()->getPlugin("RankUP");
