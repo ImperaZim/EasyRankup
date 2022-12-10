@@ -14,6 +14,15 @@ use ImperaZim\EasyGroups\Functions\Groups\UpdateGroup;
 class AsyncTask extends Task {
 
  public $state = 0;
+ public $clan = null;
+ public $rankup = null;
+ 
+ public function __construct() {
+  $clan = Loader::getInstance()->getServer()->getPluginManager()->getPlugin("Clan");
+  $rankup = Loader::getInstance()->getServer()->getPluginManager()->getPlugin("RankUP");
+  $this->clan = $clan; 
+  $this->rankup = $rankup; 
+ } 
  
  public static function register($loader, AsyncTask $task) : void {
   $loader->getScheduler()->scheduleRepeatingTask($task, 10);
@@ -48,21 +57,17 @@ class AsyncTask extends Task {
  }
  
  public function getRank($player) {
-  $plugin = Loader::getInstance(); 
-  $r = $plugin->getServer()->getPluginManager()->getPlugin("RankUP");
-  if ($r == null) {
+  if ($this->rankup == null) {
    return "no-plugin";
   }
-  return $r->rank->get($player->getName()) ?? "[+]";
+  return $this->rankup->rank->get($player->getName()) ?? "[+]";
  }
  
  public function getClan($player) {
-  $plugin = Loader::getInstance(); 
-  $c = $plugin->getServer()->getPluginManager()->getPlugin("Clan");
-  if ($c == null) {
+  if ($this->clan == null) {
    return "no-plugin";
   }
-  return $c->getTag($c->getClan($player)) ?? "no-clan";
+  return $this->clan->getTag($this->clan->getClan($player)) ?? "no-clan";
  } 
  
 }
