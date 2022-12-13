@@ -19,7 +19,7 @@ class AsyncTask extends Task {
  
  public function __construct() {
   $clan = Loader::getInstance()->getServer()->getPluginManager()->getPlugin("Clan");
-  $rankup = Loader::getInstance()->getServer()->getPluginManager()->getPlugin("RankUP");
+  $rankup = Loader::getInstance()->getServer()->getPluginManager()->getPlugin("EasyRankup");
   $this->clan = $clan; 
   $this->rankup = $rankup; 
  } 
@@ -60,7 +60,7 @@ class AsyncTask extends Task {
   if ($this->rankup == null) {
    return "no-plugin";
   }
-  return $this->rankup->rank->get($player->getName()) ?? "[+]";
+  return $this->rankup->getRankManager()->getTag($player); 
  }
  
  public function getClan($player) {
