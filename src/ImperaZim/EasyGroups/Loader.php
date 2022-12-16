@@ -20,21 +20,18 @@ class Loader extends PluginBase {
   return self::$instance;
  }
 
- public function onLoad() : void {
-  self::$instance = $this;
- }
-
  public function onEnable() : void {
+  self::$instance = $this; 
+  $this->loadAll();
+ }
+ 
+ public function loadAll() : void { 
   _Group::default();
   SQLite3::createTable();
   self::registerEvents();
   self::registerCommandMap();
   _Group::loadGroups();
   AsyncTask::register($this, new AsyncTask());
- }
-
- public function onDisable() : void {
-  (new AsyncTask())->unregister();
  }
 
   public static function registerEvents() : void {
