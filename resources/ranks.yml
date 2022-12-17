@@ -1,0 +1,94 @@
+
+# ====== ranks configuration ====== #
+
+ranks:
+  EarthI:
+    tag: "§6[EarthI]"
+    price: 0 
+    title_form: "§l§6EarthI {line_up} §r§a{price} ({price_converted})"
+    icon_form: "path:textures/blocks/dirt.png"
+    permissions: []
+  EarthII:
+    tag: "§6[EarthII]"
+    price: 1000
+    title_form: "§l§6EarthII {line_up} §r§a{price} ({price_converted})"
+    icon_form: "path:textures/blocks/dirt.png"
+    permissions: [] 
+  EarthIII:
+    tag: "§6[EarthIII]"
+    price: 2000 
+    title_form: "§l§6EarthIII {line_up} §r§a{price} ({price_converted})"
+    icon_form: "path:textures/blocks/dirt.png"
+    permissions: [] 
+  StoneI:
+    tag: "§7[StoneI]"
+    price: 4000 
+    title_form: "§l§7StoneI {line_up} §r§a{price} ({price_converted})"
+    icon_form: "path:textures/blocks/stone.png"
+    permissions: [] 
+  StoneII:
+    tag: "§7[StoneII]"
+    price: 8000 
+    title_form: "§l§7StoneII {line_up} §r§a{price} ({price_converted})"
+    icon_form: "path:textures/blocks/stone.png"
+    permissions: [] 
+  StoneIII:
+    tag: "§7[StoneIII]"
+    price: 16000 
+    title_form: "§l§7StoneIII {line_up} §r§a{price} ({price_converted})"
+    icon_form: "path:textures/blocks/stone.png"
+    permissions: [] 
+  IronI:
+    tag: "§f[IronI]"
+    price: 32000 
+    title_form: "§l§fIronI {line_up} §r§a{price} ({price_converted})"
+    icon_form: "path:textures/blocks/iron_block.png"
+    permissions: [] 
+  IronII:
+    tag: "§f[IronII]"
+    price: 64000 
+    title_form: "§l§fIronII {line_up} §r§a{price} ({price_converted})"
+    icon_form: "path:textures/blocks/iron_block.png"
+    permissions: [] 
+  IronIII:
+    tag: "§f[IronIII]"
+    price: 128000 
+    title_form: "§l§fIronIII {line_up} §r§a{price} ({price_converted})"
+    icon_form: "path:textures/blocks/iron_block.png"
+    permissions: [] 
+  GoldI:
+    tag: "§e[GoldI]"
+    price: 256000 
+    title_form: "§l§eGoldI {line_up} §r§a{price} ({price_converted})"
+    icon_form: "path:textures/blocks/gold_block.png"
+    permissions: [] 
+  GoldII:
+    tag: "§e[GoldII]"
+    price: 512000 
+    title_form: "§l§eGoldII {line_up} §r§a{price} ({price_converted})"
+    icon_form: "path:textures/blocks/gold_block.png"
+    permissions: [] 
+  GoldIII:
+    tag: "§e[GoldIII]"
+    price: 1024000 
+    title_form: "§l§eGoldIII {line_up} §r§a{price} ({price_converted})"
+    icon_form: "path:textures/blocks/gold_block.png"
+    permissions: [] 
+  DiamondI:
+    tag: "§b[DiamondI]"
+    price: 2048000 
+    title_form: "§l§bDiamondI {line_up} §r§a{price} ({price_converted})"
+    icon_form: "path:textures/blocks/diamond_block.png"
+    permissions: [] 
+  DiamondII:
+    tag: "§b[DiamondII]"
+    price: 4096000 
+    title_form: "§l§bDiamondII {line_up} §r§a{price} ({price_converted})"
+    icon_form: "path:textures/blocks/diamond_block.png"
+    permissions: [] 
+  DiamondIII:
+    tag: "§b[DiamondIII]"
+    price: 8192000
+    title_form: "§l§bDiamondIII {line_up} §r§a{price} ({price_converted})"
+    icon_form: "path:textures/blocks/diamond_block.png"
+    permissions: []
