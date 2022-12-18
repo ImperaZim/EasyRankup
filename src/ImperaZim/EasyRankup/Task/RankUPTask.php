@@ -11,7 +11,6 @@ use pocketmine\world\sound\XpCollectSound;
 use pocketmine\scheduler\CancelTaskException;
 use ImperaZim\EasyRankup\Dependence\EasyEconomy;
 use pocketmine\entity\animation\TotemUseAnimation; 
-use ImperaZim\EasyEconomy\PluginUtils as EconomyUtils;
 
 class RankUPTask extends Task {
 
@@ -51,7 +50,7 @@ class RankUPTask extends Task {
   }
   
   $this->data["timer"] = $this->data["timer"] - 1;
-  $this->data["money"] = EconomyUtils::convertCurrency($this->data["price"]);
+  $this->data["money"] = PluginUtils::convertCurrency($this->data["price"]);
   
   if (!$player instanceof Player) {
    throw new CancelTaskException();
@@ -85,7 +84,7 @@ class RankUPTask extends Task {
     $player->sendTitle($message[0], $message[1]); 
     
     $player->broadcastAnimation(new TotemUseAnimation($player)); 
-    $player->getWorld()->addSound($player->getPosition(), new XpCollectSound($player->getPosition()), [$player]); 
+    $player->getWorld()->addSound($player->getPosition(), new XpCollectSound(), [$player]); 
    }
    
    throw new CancelTaskException();
