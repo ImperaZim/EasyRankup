@@ -62,7 +62,10 @@ class Rank {
  } 
  
  public function isLastRank(Player $player) : bool {
-  foreach($this->getAll() as $rank => $data) { $rankId = $rank; }
+  $rankId = "";
+  foreach($this->getAll() as $rank => $data) {
+   $rankId = $rank;
+  }
   return $this->getRankName($player) == $rankId;
  }
  
