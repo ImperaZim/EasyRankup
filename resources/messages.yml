@@ -34,9 +34,9 @@ forms:
    buttons:
     rankup:
      title: "§eRANKUP§r {lineup}§8click to rankup"
-     icon: "path:textures/ui/smithing_icon.png"
+     icon: "url=https://i.imgur.com/N2UX9UI.png"
     back:
      title: "§cBack to list {lineup}§8click to back"
-     icon: "path:textures/ui/listx.png"
+     icon: "path=textures/ui/listx.png"
    CURRENT_RANK_DETAILS: "§eYou are currently in this rank!  {lineup}§7If you want to see details of other ranks try clicking on a rank higher than yours!"
    SURPASSED_RANK_DETAILS: "§eYou have already surpassed this rank!  {lineup}§7If you want to see details of other ranks try clicking on a rank higher than yours!"
