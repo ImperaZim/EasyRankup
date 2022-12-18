@@ -11,7 +11,6 @@ use ImperaZim\EasyRankup\PluginUtils;
 use pocketmine\command\CommandSender;
 use ImperaZim\EasyRankup\Forms\FormAPI;
 use ImperaZim\EasyRankup\Task\RankUPTask; 
-use ImperaZim\EasyEconomy\PluginUtils as EconomyUtils; 
 
 class RanksCommand extends Command implements PluginOwned {
  
@@ -57,7 +56,7 @@ class RanksCommand extends Command implements PluginOwned {
   $form->setContent("");
   foreach ($ranks->getAll() as $rank => $data) {
    $price = number_format($data["price"], 0, "",  ".");
-   $price_converted = EconomyUtils::convertCurrency($data["price"]);
+   $price_converted = PluginUtils::convertCurrency($data["price"]);
    if ($ranks->getRankInNumeric($rank) < $ranks->getRankId($player)) {
     $price = PluginUtils::convertString([], [], $plugin->getMessages()->getNested("forms.ranks.SURPASSED_RANK")); 
     $price_converted = "#";
@@ -131,7 +130,7 @@ class RanksCommand extends Command implements PluginOwned {
    $price = (int) $calc;
   }
   
-  $price_converted = EconomyUtils::convertCurrency($price); 
+  $price_converted = PluginUtils::convertCurrency($price); 
   $price = number_format($price, 0, "",  ".");
    
   if ($ranks->getRankInNumeric($rank) < $rankId) {
@@ -149,11 +148,11 @@ class RanksCommand extends Command implements PluginOwned {
    $content .= "\n" . $line;
   }
   if ($ranks->getRankInNumeric($rank) < $rankId) {
-   $form->setContent(PluginUtils::convertString(["{rank}", "{rank_with_bars}", "{price}", "{price_converted}", "{player_rank_with_bars}", "{selected_rank_with_bars}", "{price_to_jump}", "{price_to_jump_converted}", "{lineup}"], [str_replace(["[", "]"], [" "], $ranks->getTagByRank($rank)), $ranks->getTagByRank($rank), number_format($ranks->getPriceByRank($rank)), EconomyUtils::convertCurrency($ranks->getPriceByRank($rank)), $ranks->getTag($player), $ranks->getTagByRank($rank), $price, $price_converted, "\n"], $plugin->getMessages()->getNested("forms.ranks.rank_details.SURPASSED_RANK_DETAILS")));
+   $form->setContent(PluginUtils::convertString(["{rank}", "{rank_with_bars}", "{price}", "{price_converted}", "{player_rank_with_bars}", "{selected_rank_with_bars}", "{price_to_jump}", "{price_to_jump_converted}", "{lineup}"], [str_replace(["[", "]"], [" "], $ranks->getTagByRank($rank)), $ranks->getTagByRank($rank), number_format($ranks->getPriceByRank($rank)), PluginUtils::convertCurrency($ranks->getPriceByRank($rank)), $ranks->getTag($player), $ranks->getTagByRank($rank), $price, $price_converted, "\n"], $plugin->getMessages()->getNested("forms.ranks.rank_details.SURPASSED_RANK_DETAILS")));
   }elseif ($ranks->getRankInNumeric($rank) == $rankId) {
-   $form->setContent(PluginUtils::convertString(["{rank}", "{rank_with_bars}", "{price}", "{price_converted}", "{player_rank_with_bars}", "{selected_rank_with_bars}", "{price_to_jump}", "{price_to_jump_converted}", "{lineup}"], [str_replace(["[", "]"], [" "], $ranks->getTagByRank($rank)), $ranks->getTagByRank($rank), number_format($ranks->getPriceByRank($rank)), EconomyUtils::convertCurrency($ranks->getPriceByRank($rank)), $ranks->getTag($player), $ranks->getTagByRank($rank), $price, $price_converted, "\n"], $plugin->getMessages()->getNested("forms.ranks.rank_details.CURRENT_RANK_DETAILS")));
+   $form->setContent(PluginUtils::convertString(["{rank}", "{rank_with_bars}", "{price}", "{price_converted}", "{player_rank_with_bars}", "{selected_rank_with_bars}", "{price_to_jump}", "{price_to_jump_converted}", "{lineup}"], [str_replace(["[", "]"], [" "], $ranks->getTagByRank($rank)), $ranks->getTagByRank($rank), number_format($ranks->getPriceByRank($rank)), PluginUtils::convertCurrency($ranks->getPriceByRank($rank)), $ranks->getTag($player), $ranks->getTagByRank($rank), $price, $price_converted, "\n"], $plugin->getMessages()->getNested("forms.ranks.rank_details.CURRENT_RANK_DETAILS")));
   }else{
-   $form->setContent(PluginUtils::convertString(["{rank}", "{rank_with_bars}", "{price}", "{price_converted}", "{player_rank_with_bars}", "{selected_rank_with_bars}", "{price_to_jump}", "{price_to_jump_converted}", "{lineup}"], [str_replace(["[", "]"], [" "], $ranks->getTagByRank($rank)), $ranks->getTagByRank($rank), number_format($ranks->getPriceByRank($rank)), EconomyUtils::convertCurrency($ranks->getPriceByRank($rank)), $ranks->getTag($player), $ranks->getTagByRank($rank), $price, $price_converted, "\n"], $content));
+   $form->setContent(PluginUtils::convertString(["{rank}", "{rank_with_bars}", "{price}", "{price_converted}", "{player_rank_with_bars}", "{selected_rank_with_bars}", "{price_to_jump}", "{price_to_jump_converted}", "{lineup}"], [str_replace(["[", "]"], [" "], $ranks->getTagByRank($rank)), $ranks->getTagByRank($rank), number_format($ranks->getPriceByRank($rank)), PluginUtils::convertCurrency($ranks->getPriceByRank($rank)), $ranks->getTag($player), $ranks->getTagByRank($rank), $price, $price_converted, "\n"], $content));
   }
   
   if ($ranks->getRankInNumeric($rank) > $rankId) { 
