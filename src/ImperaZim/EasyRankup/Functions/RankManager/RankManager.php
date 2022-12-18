@@ -6,7 +6,7 @@ use pocketmine\player\Player;
 
 class RankManager extends Rank {
  
- public function __construct() {
+ public function __construct() : RankManager {
   return $this;
  }
  
