@@ -6,10 +6,9 @@ use pocketmine\player\Player;
 
 class RankManager extends Rank {
  
- public function __construct() {
- }
+ public function __construct() { }
  
- public function getId(Player $player) : string {
+ public function getId(Player $player) : Int {
   return $this->getRankId($player);
  }
  
@@ -22,11 +21,13 @@ class RankManager extends Rank {
  }
  
  public function getPriceToUpgrade(Player $player) : Int {
-  return $this->getPriceByRank($this->getRankNameById($this->getId($player) + 1));
+  $rank = $this->getId($player) + 1;
+  return $this->getPriceByRank($this->getRankNameById($rank));
  }
  
  public function getNextRank(Player $player) : string {
-  return $this->getTagByRank($this->getRankNameById($this->getId($player) + 1));
+  $rank = $this->getId($player) + 1;
+  return $this->getTagByRank($this->getRankNameById($rank));
  }
  
 }
