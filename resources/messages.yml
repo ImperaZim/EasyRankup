@@ -29,7 +29,7 @@ forms:
     - "§7 Price: §a{price} ({price_converted})"
     - "§7 "
     - "§7 {player_rank_with_bars} §7=> {selected_rank_with_bars}"
-    - "§7 Price to jump: §a {price_to_jump} ({price_to_jump_converted})"
+    - "§7 Price to jump: §a{price_to_jump} ({price_to_jump_converted})"
     - "§7 "
    buttons:
     rankup:
@@ -37,6 +37,6 @@ forms:
      icon: "url=https://i.imgur.com/N2UX9UI.png"
     back:
      title: "§cBack to list {lineup}§8click to back"
-     icon: "path=textures/ui/listx.png"
+     icon: "url=https://i.imgur.com/qSpzhxJ.png "
    CURRENT_RANK_DETAILS: "§eYou are currently in this rank!  {lineup}§7If you want to see details of other ranks try clicking on a rank higher than yours!"
    SURPASSED_RANK_DETAILS: "§eYou have already surpassed this rank!  {lineup}§7If you want to see details of other ranks try clicking on a rank higher than yours!"
