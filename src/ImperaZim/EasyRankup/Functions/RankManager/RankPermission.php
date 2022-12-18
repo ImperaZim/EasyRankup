@@ -6,9 +6,7 @@ use ImperaZim\EasyRankup\EasyRankup;
 
 class RankPermission extends RankManager {
  
- public function __construct() {
-  return $this;
- }
+ public function __construct() { }
 
  public function UpdatePermissions($player) : void {
   $plugin = Easyrankup::getInstance(); 
