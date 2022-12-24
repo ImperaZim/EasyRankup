@@ -41,3 +41,4 @@ commands:
    has_perm: "{prefix} §7Permission §e{permission} §7already exists in group §e{group}§7!"
   removepermission:
    sucess: "{prefix} §7Permission §e{permission}§7 has been sucessfully removed from group §a{group}§7!"
+ 
