@@ -1,11 +1,11 @@
 name: EasyGroups
-version: 1.0.0
 author: ImperaZim
-api: [4.0.0]
-main: ImperaZim\EasyGroups\Loader
+version: 2.0.0
+api: 4.0.0
+main: ImperaZim\EasyGroups\EasyGroups
 
-permissions:
-  easygroups.op:
-    default: op
-  easygroups.colored.format:
-    default: false
+permissions: 
+ easygroups.command.use:
+  deafult: op
+ easygroups.colored.format:
+  deafult: op
