@@ -6,23 +6,4 @@ A plugin for you to define groups and roles for players and permissions for thes
 ## Compatibility 
 This plugin is meant to be used on servers made only in the software **[PocketMine-MP](https://github.com/pmmp/PocketMine-MP)**, it may not work perfectly in variants of it.
 
-## Commands:
-- /easygroups
-- /easygroups [args...]
-
-## Main commands:
-- create: /easygroups create
-- delete: /easygroups delete
-- set: /easygroups set
-- list: /easygroups list
-- edit: /easygroups edit
-- addperm: /easygroups addperm
-- removeperm: /easygroups removeperm
-
-## EasyGroups API
-```php 
-use ImperaZim\EasyGroups\Loader as API;
-API::ImportPrefixByPlayer($player); // example return "Player"
-API::ImportTagByPlayer($player); // example return "[Player]"
-API::ImportTypeByPrefix(API::ImportPrefixByPlayer($player)); // example return "normal"
-```
+### COMMING SOON
