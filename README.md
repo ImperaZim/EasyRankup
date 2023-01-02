@@ -33,7 +33,14 @@ This plugin is meant to be used on servers made only in the software **[PocketMi
 ## Commands Permissions
 | Command | Permission | Default |
 | ------- | ---------- | ------- |
+| all | `easygroups.command` | `OPERATOR` |
 | help | `easygroups.command.help` | `OPERATOR` `CONSOLE` |
+| create | `easygroups.command.create` | `OPERATOR` |
+| delete | `easygroups.command.delete` | `OPERATOR` |
+| update | `easygroups.command.update` | `OPERATOR` |
+| set | `easygroups.command.group` | `OPERATOR` |
+| setdefault | `easygroups.command.setdefault` | `OPERATOR` |
+| permission | `easygroups.command.permission` | `OPERATOR` |
 
 ## License
 ```
