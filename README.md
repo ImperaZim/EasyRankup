@@ -6,6 +6,18 @@ A plugin for you to define groups and roles for players and permissions for thes
 ## Compatibility 
 This plugin is meant to be used on servers made only in the software **[PocketMine-MP](https://github.com/pmmp/PocketMine-MP)**, it may not work perfectly in variants of it.
 
+## Main Command
+| Usage |   Description   | Default Permission |
+| :---: | :---------: | :----------------: |
+| /group | Default Command | `OPERATOR` |
+
+## Command Args
+| Usage | Description | Default Permission |
+| :-----: | :---------: | :-------: |
+| create | Create a new groups | `OPERATOR` |
+| delete | Delete a group exists | `OPERATOR` |
+| update | Update a group's settings | `OPERATOR` |
+
 ## License
 ```
 EasyGroups, the group plugin with many features for PocketMine-MP
