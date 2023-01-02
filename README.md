@@ -34,7 +34,7 @@ This plugin is meant to be used on servers made only in the software **[PocketMi
 | Command | Permission | Default |
 | ------- | ---------- | ------- |
 | all | `easygroups.command` | `OPERATOR` |
-| help | `easygroups.command.help` | `OPERATOR` `CONSOLE` |
+| help | `easygroups.command.help` | `OPERATOR` |
 | create | `easygroups.command.create` | `OPERATOR` |
 | delete | `easygroups.command.delete` | `OPERATOR` |
 | update | `easygroups.command.update` | `OPERATOR` |
