@@ -5,7 +5,19 @@ api: 4.0.0
 main: ImperaZim\EasyGroups\EasyGroups
 
 permissions: 
- easygroups.command.use:
-  deafult: op
+ easygroups.command:
+  deafult: op  
+ easygroups.command.help:
+  deafult: op 
+ easygroups.command.create:
+  deafult: op 
+ easygroups.command.delete:
+  deafult: op 
+ easygroups.command.update:
+  deafult: op 
+ easygroups.command.setdefault:
+  deafult: op 
+ easygroups.command.permission:
+  deafult: op 
  easygroups.colored.format:
   deafult: op
