@@ -14,6 +14,7 @@ This plugin is meant to be used on servers made only in the software **[PocketMi
 ## Command Args
 | Usage | Description | Default Permission |
 | :-----: | :---------: | :-------: |
+| help | See list of subcommands | `OPERATOR` `CONSOLE` |
 | create | Create a new groups | `OPERATOR` |
 | delete | Delete a group exists | `OPERATOR` |
 | update | Update a group's settings | `OPERATOR` |
