@@ -20,15 +20,15 @@ This plugin is meant to be used on servers made only in the software **[PocketMi
 | /group | Default Command |
 
 ## Command Args
-| Usage | Description |
-| ----- | ----------- | 
-| help | `See list of subcommands` |
-| create | `Create a new groups` | 
-| delete | `Delete a group exists` |
-| update | `Update a group's settings` |
-|  set   | `Update a player's group` |
-| setdefault | `Update the server's default group` |
-| permission | `Edit a group or player's permissions` |
+| Usage | Description | Permission |
+| ----- | ----------- | ---------- |
+| help | `See list of subcommands` | `help` |
+| create | `Create a new groups` | `create` | 
+| delete | `Delete a group exists` | `delete` |
+| update | `Update a group's settings` | `Update` |
+|  set   | `Update a player's group` | `set` |
+| setdefault | `Update the server's default group` | `setdefault` |
+| permission | `Edit a group or player's permissions` | `permission` |
 
 ## Commands Permissions
 | Command | Permission | Default |
