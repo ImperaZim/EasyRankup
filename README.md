@@ -15,20 +15,25 @@ A plugin for you to define groups and roles for players and permissions for thes
 This plugin is meant to be used on servers made only in the software **[PocketMine-MP](https://github.com/pmmp/PocketMine-MP)**, it may not work perfectly in variants of it.
 
 ## Main Command
-| Usage |   Description   | Default Permission |
-| :---: | :---------: | :----------------: |
-| /group | Default Command | `OPERATOR` |
+| Usage |   Description   |
+| :---: | :---------: |
+| /group | Default Command |
 
 ## Command Args
-| Usage | Description | Default Permission |
-| :-----: | :---------: | :-------: |
-| help | See list of subcommands | `OPERATOR` `CONSOLE` |
-| create | Create a new groups | `OPERATOR` |
-| delete | Delete a group exists | `OPERATOR` |
-| update | Update a group's settings | `OPERATOR` |
-|  set   | Update a player's group | `OPERATOR` `and` `CUSTOM` |
-| setdefault | Update the server's default group | `OPERATOR`
-| permission | Edit a group or player's permissions | `OPERATOR ` | 
+| Usage | Description |
+| :-----: | :---------: | 
+| help | See list of subcommands |
+| create | Create a new groups | 
+| delete | Delete a group exists |
+| update | Update a group's settings |
+|  set   | Update a player's group |
+| setdefault | Update the server's default group |
+| permission | Edit a group or player's permissions |
+
+## Commands Permissions
+| Command | Permission | Default |
+| ------- | ---------- | ------- |
+| help | `easygroups.command.help` | `OPERATOR` `CONSOLE` |
 
 ## License
 ```
