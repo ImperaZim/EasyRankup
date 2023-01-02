@@ -2,7 +2,6 @@
 ![EasyGroups](https://media.discordapp.net/attachments/645792232632221729/1032113968845697034/57_Sem_Titulo_20221018041500.png)
 
 A plugin for you to define groups and roles for players and permissions for these roles easily! <br> **[Download phar]()**
-- - - -
 ### v2.0.0 features
 - *Code Update*
   - *New data saving options*
@@ -33,6 +32,7 @@ This plugin is meant to be used on servers made only in the software **[PocketMi
 
 ## License
 ```
+© ImperaZim • EasyGroups 2022 - 2023
 EasyGroups, the group plugin with many features for PocketMine-MP
 
 This program is free software: you can redistribute it and/or modify
