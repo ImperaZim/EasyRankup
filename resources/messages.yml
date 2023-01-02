@@ -1,0 +1,45 @@
+# >======================< # 
+plugin:
+ perfix: "§l§eGROUPS§r"
+# >======================< # 
+
+messages:
+ error: 
+  WITHOUT_PERMISSION: "{prefix} §7You are not allowed to use this command!"
+ create:
+  SUCCESSFULLY_CREATE: "{prefix} §7The group {group} §r§7was successfully created!"
+  GROUP_ALREADY_EXISTS: "{prefix} §7The group {group} §r§7already exists!"
+ delete:
+  SUCCESSFULLY_DELETE: "{prefix} §7The group {group} §r§7was successfully deleted!"
+  GROUP_DOES_NOT_EXISTS: "{prefix} §7The group {group} §r§7does not exists!"
+  CONFIRMATION_FORM: "§7Do you really want to delete group {group} §r§7from your server?"
+ update:
+  RESET_TO_DEFAULT: "{prefix} §7Your group has been deleted or modified from the server! Your group has been defined as {group} §r§7!"
+  GROUP_TIME_OUT: "{prefix} §7Your group time is up! Your group has been reset to {group}§r§7!"
+  OFFLINE_PLAYER: "{prefix} §7This player {player} is not online!"
+  CONFIRMATION_FORM: "§7Do you really want change player {player}'s group from {old_group}§r§7 to {new_group}§r§7?"
+  SUCCESSFULLY_UPDATE: 
+   TO_SENDER: "{prefix} §7The group of player {player} has been changed to {group}§r§7!"
+   TO_TARGET: "{prefix} §7Your group has been changed to {group}§r§7!"
+  GROUP_DOES_NOT_EXISTS: "{prefix} §7The group {group} §r§7does not exists!" 
+ default:
+  CONFIRMATION_FORM: "§7Are you sure you want to change the default group from {old_group}§r§7 to {new_group}§r§7?"
+  SUCCESSFULLY_UPDATE: "{prefix} §7The default group has been set to {group}§r§7!"
+ edit:
+  CONFIRMATION_FORM: "§7Are you sure you want to update the definitions of the group {group}§r§7?"
+  SUCCESSFULLY_UPDATE: "{prefix} §7Group definitions {group} §r§7have been successfully updated!"
+ permission:
+  ADD: 
+   CONFIRMATION_FORM: "§7Do you really want to add the permission §e{permission}§7 to the permission list of the group {group}§r§7?"
+   SUCCESSFULLY_ADD: "{prefix} §7The permission §e{permission} §7was successfully added to the group's permission list {group}§r§7!"
+  REMOVE:
+   CONFIRMATION_FORM: "§7Do you really want to remove the permission §e{permission}§7 to the permission list of the group {group}§r§7?"
+   SUCCESSFULLY_REMOVE: "{prefix} §7The permission §e{permission} §7was successfully removed to the group's permission list {group}§r§7!"
+  USER:
+   ADD_USER_PERMISSION:
+    CONFIRMATION_FORM: "§7Do you really want to add the permission §e{permission}§7 to the permission list of the player {player}§r§7?"
+    SUCCESSFULLY_ADD: "{prefix} §7The permission §e{permission} §7was successfully added to the player's permission list {player}§r§7!"
+   REMOVE_USER_PERMISSION:
+    CONFIRMATION_FORM: "§7Do you really want to remove the permission §e{permission}§7 to the permission list of the player {player}§r§7?"
+    SUCCESSFULLY_REMOVE: "{prefix} §7The permission §e{permission} §7was successfully removed to the player's permission list {player}§r§7!"
+    UNDEFINED_PERMISSIONS: "§7This player does not have any permissions that can be removed from your personal permissions list!"
