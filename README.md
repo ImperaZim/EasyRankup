@@ -29,6 +29,7 @@ This plugin is meant to be used on servers made only in the software **[PocketMi
 |  set   | `Update a player's group` | `set` |
 | setdefault | `Update the server's default group` | `setdefault` |
 | permission | `Edit a group or player's permissions` | `permission` |
+| permission | `easygroups.command.permission` | `OPERATOR` |
 
 ## Commands Permissions
 | Command | Permission | Default |
