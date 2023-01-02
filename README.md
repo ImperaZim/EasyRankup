@@ -1,5 +1,5 @@
 # <h3 align="center">EasyGroups v2.0.0 (beta)</h3> 
-![EasyGroups]()
+![EasyGroups](https://media.discordapp.net/attachments/645792232632221729/1032113968845697034/57_Sem_Titulo_20221018041500.png)
 
 A plugin for you to define groups and roles for players and permissions for these roles easily! <br> **[Download phar]()**
 ### v2.0.0 features
@@ -28,7 +28,7 @@ This plugin is meant to be used on servers made only in the software **[PocketMi
 | update | Update a group's settings |
 |  set   | Update a player's group |
 | setdefault | Update the server's default group |
-| permission | Edit a group or player's permissions |
+| permission | `Edit a group or player's permissions` |
 
 ## Commands Permissions
 | Command | Permission | Default |
