@@ -17,11 +17,13 @@ This plugin is meant to be used on servers made only in the software **[PocketMi
 | create | Create a new groups | `OPERATOR` |
 | delete | Delete a group exists | `OPERATOR` |
 | update | Update a group's settings | `OPERATOR` |
+|  set   | Update a player's group | `OPERATOR` `and` `CUSTOM` |
+| setdefault | Update the server's default group | `OPERATOR`
+| permission | Edit a group or player's permissions | `OPERATOR ` | 
 
 ## License
 ```
 EasyGroups, the group plugin with many features for PocketMine-MP
-Copyright (C) 2013-2021  onebone <me@onebone.me>
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
