@@ -1,44 +1,24 @@
-#------------------------------ #
 
-# This group will be created if it doesn't exist and will be set to all new players or players who don't have any groups!
+# >======================< #
 
-default.group: "Player"
-#------------------------------
-default.prefix: "§l§eGROUPS§r"
-
-# Plugin messaging configuration: #
-
-commands: 
- help_message: "{prefix} §7Use /easygroup help"
- no_permission: "{prefix} §7You do not have permission to use this command!"
+database:
+ type: "YAML"
  
- subcommands:
-  listcommand:
-   preset: "{prefix} §7Group list: \n §dVIP Groups §r§7=> {vips} \n §eNormal Groups §r§7=> {normals}"
-  setcommand:
-   unknow_group: "{prefix} §7The group §e{group} §7does not exist!"
-   author_sucess: "{prefix} §7The group of §e{target} §7has been changed to §e{group}"
-   target_sucess: "{prefix} §7Your group has been changed to §e{group}"
-   help_message: "{prefix} §7Use /easygroup set (player) (name)"
-   offline_player: "{prefix} §7The player §e\"{target}\" §7is not online!"
-  editcommand:
-   help_message: "{prefix} §7Use /easygroup edit (name)"
-  createcommand:
-   sucess: "{prefix} §7Group §e{group} §7sucessfully created!"
-   failed: "{prefix} §7The group §a{group} §7already exists!"
-   failed_type: "{prefix} §7Type §a{type} §7does not exist!"
-  deletecommand:
-   form_confirm: "§7Do you really want to delete group §e{group}§7 from your server?"
-   sucess: "{prefix} §7The group {deleted_group} §7was deleted from the server, players with this group will have their group changed to {default_group}"
-   player_notify: "{prefix} §7The group §e{deleted_group} §7has been deleted from the server and its group has been changed to §e{default_group}"
-   group_no_exist: "{prefix} §7The group {group} does not exist!"
-   has_default: "{prefix} §7You cannot delete the group §e{group}§7 as it is the default group!"
-  setdefaultgroup:
-   sucess: "{prefix} §7The group §e{group}§7 has been set as default!"
-  addpermission:
-   failed: "{prefix} §7Please enter a valid permission!"
-   sucess: "{prefix} §7Permission §e{permission}§7 has been sucessfully added to group §e{group}§7!"
-   has_perm: "{prefix} §7Permission §e{permission} §7already exists in group §e{group}§7!"
-  removepermission:
-   sucess: "{prefix} §7Permission §e{permission}§7 has been sucessfully removed from group §a{group}§7!"
+ mysql-provinder: 
+  host: 0.0.0.0
+  port: 3306
+  user: EasyGroups
+  password: user_admin
+  db: EasyPlugins 
+  
+# >======================< #
+
+group: 
+ default: "guest"
  
+ alert:
+  enable: true
+  only-vip: true
+  message: ["{player}", "§7became {group}"]
+  
+# >======================< #
