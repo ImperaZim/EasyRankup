@@ -17,7 +17,7 @@ This plugin is meant to be used on servers made only in the software **[PocketMi
 ## Main Command
 | Usage |   Description   |
 | :---: | :---------: |
-| /group | Default Command |
+| /group [args...] | Default Command |
 
 ## Command Args
 | Usage | Description |
