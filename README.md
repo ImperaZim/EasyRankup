@@ -1,6 +1,5 @@
-# <h3 align="center">EasyGroups v2.0.0</h3> 
 ![EasyGroups](https://raw.githubusercontent.com/ImperaZim/EasyGroups/v2.0/metadata/icon.png)
-
+# <h3>EasyGroups v2.0.0</h3> 
 A plugin for you to define groups and roles for players and permissions for these roles easily! <br> **[Download phar]()**
 
 <h4 align="center">
