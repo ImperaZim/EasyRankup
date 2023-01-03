@@ -12,6 +12,8 @@ A plugin for you to define groups and roles for players and permissions for thes
  </details>
 <h4>
 
+- - - -
+
 ## License
   ```
    © ImperaZim • EasyGroups 2022 - 2023
