@@ -12,7 +12,3 @@ A plugin for you to define groups and roles for players and permissions for thes
  <span align="left"> <h6>ㅤㅤUser Permissions <br>ㅤㅤUpdate Group Definitions <br>ㅤㅤSetting groups on timed players  </h6></span>
 </details>
 <h4>
-
-- - - -
-## Compatibility 
-This plugin is meant to be used on servers made only in the software **[PocketMine-MP](https://github.com/pmmp/PocketMine-MP)**, it may not work perfectly in variants of it.
