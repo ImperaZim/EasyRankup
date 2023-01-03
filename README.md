@@ -12,10 +12,8 @@ A plugin for you to define groups and roles for players and permissions for thes
  </details>
 <h4>
 
-<h4>
- <details>
-  <summary> License </summary>
-  <span align="left"> <h6>
+## License
+  ```
    © ImperaZim • EasyGroups 2022 - 2023
    EasyGroups, the group plugin with many features for PocketMine-MP
    
@@ -31,6 +29,4 @@ A plugin for you to define groups and roles for players and permissions for thes
    
    You should have received a copy of the GNU General Public License
    along with this program.  If not, see <http://www.gnu.org/licenses/>. 
-   </h6> </soan>
- </details>
-</h4>
+   ```
