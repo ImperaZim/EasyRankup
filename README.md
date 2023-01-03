@@ -10,7 +10,7 @@ A plugin for you to define groups and roles for players and permissions for thes
   <h5 align="left">New Functions</h6>
   <span align="left"> <h6>ㅤㅤUser Permissions <br>ㅤㅤUpdate Group Definitions <br>ㅤㅤSetting groups on timed players  </h6></span>
  </details>
-<h4>
+</h4>
 
 - - - -
 
