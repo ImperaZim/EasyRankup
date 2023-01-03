@@ -3,10 +3,10 @@
 
 A plugin for you to define groups and roles for players and permissions for these roles easily! <br> **[Download phar]()**
 ### v2.0.0 Features
-- *Code Update*
+- **Code Update**
   - *New data saving options*
   - *Complete refactoring of source code*
-- *New functions*
+- **New functions**
   - *User Permission*
   - *Update Group Definitions*
   - *Setting groups on timed players*
