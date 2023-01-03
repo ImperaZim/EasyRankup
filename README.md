@@ -2,7 +2,7 @@
 ![EasyGroups](https://raw.githubusercontent.com/ImperaZim/EasyGroups/v2.0/metadata/groups_20230103054903.png)
 
 A plugin for you to define groups and roles for players and permissions for these roles easily! <br> **[Download phar]()**
-### v2.0.0 features
+### v2.0.0 Features
 - *Code Update*
   - *New data saving options*
   - *Complete refactoring of source code*
