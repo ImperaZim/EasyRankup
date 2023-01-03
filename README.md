@@ -19,7 +19,7 @@ This plugin is meant to be used on servers made only in the software **[PocketMi
 | :---: | :---------: |
 | /group [args...] | Default Command |
 
-## Command Args
+### Command Args
 | Usage | Description |
 | :-----: | :---------: | 
 | help | See list of subcommands |
@@ -30,7 +30,7 @@ This plugin is meant to be used on servers made only in the software **[PocketMi
 | setdefault | Update the server's default group |
 | permission | Edit a group or player's permissions |
 
-## Commands Permissions
+### Commands Permissions
 | Command | Permission | Default |
 | ------- | ---------- | ------- |
 | all | `easygroups.command` | `OPERATOR` |
