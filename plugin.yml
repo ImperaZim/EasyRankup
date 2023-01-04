@@ -1,8 +1,8 @@
 name: EasyGroups
-author: ImperaZim
+author: Impera
 version: 2.0.0
 api: 4.0.0
-main: ImperaZim\EasyGroups\EasyGroups
+main: Impera\EasyGroups\EasyGroups
 
 permissions: 
  easygroups.command:
