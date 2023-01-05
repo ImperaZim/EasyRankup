@@ -31,7 +31,7 @@ class EasyGroups extends PluginBase {
    $this->getGroupManager()->generatePath();
    AsyncTask::register($this, new AsyncTask());
   }
-	} 
+ }  
 	
  public function getProvinder() {
   return DataBase::open();
