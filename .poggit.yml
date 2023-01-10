@@ -4,5 +4,5 @@ branches:
 - v2.0
 projects:
   EasyGroups:
-    url: "metadata/groups_20230103054903.png"
+    url: "https://raw.githubusercontent.com/ImperaZim/EasyGroups/v2.0/metadata/groups_20230103054903.png"
 ...
