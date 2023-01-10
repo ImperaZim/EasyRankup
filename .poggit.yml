@@ -1,0 +1,8 @@
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/ImperaZim/EasyGroups
+build-by-default: true
+branches:
+- v2.0
+projects:
+  EasyGroups:
+    path: "metadata/groups_20230103054903.png"
+...
