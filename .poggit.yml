@@ -4,5 +4,5 @@ branches:
 - v2.0
 projects:
   EasyGroups:
-    path: "metadata/groups_20230103054903.png"
+    url: "metadata/groups_20230103054903.png"
 ...
