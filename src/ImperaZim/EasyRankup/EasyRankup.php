@@ -6,6 +6,7 @@ use pocketmine\utils\Config;
 use pocketmine\plugin\PluginBase;
 use ImperaZim\EasyRankup\Event\Events; 
 use ImperaZim\EasyRankup\Command\Commands; 
+use ImperaZim\EasyRankup\Dependence\Economy; 
 use ImperaZim\EasyRankup\Functions\DataBase\DataBase;
 use ImperaZim\EasyRankup\Functions\RankManager\RankManager;
 
@@ -24,10 +25,14 @@ class EasyRankup extends PluginBase {
  
  public function onEnable() : void { 
   if(DataBase::checkType()) {
-   Events::registerAll();
-   Commands::registerAll();
-   $this->saveResource('ranks.yml');
-   $this->saveResource('messages.yml');
+   if (Economy::hasDependences()) { 
+    Events::registerAll();
+    Commands::registerAll();
+    $this->saveResource('ranks.yml');
+    $this->saveResource('messages.yml');
+   }else{
+    $this->getLogger()->warning("There seems to be some problem in defining the dependency of economy (config.yml > economy-type)");
+   } 
   }
  }
  
