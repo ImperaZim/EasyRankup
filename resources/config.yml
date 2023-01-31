@@ -7,8 +7,8 @@ database-type: "sqlite3"
 
 # MYSQL Settings  #
 database-provinder:
- host: 51.81.47.131
+ host: 0.0.0.0
  port: 3306
- user: u720_m5HkgVNSm8
- password: dZJBsc=3Fno@OsWpY3dB+zpp
- db: s720_easyplugins
+ user: s000_easyplugins
+ password: admin
+ db: s000_easyplugins
