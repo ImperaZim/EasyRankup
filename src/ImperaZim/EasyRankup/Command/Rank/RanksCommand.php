@@ -175,4 +175,4 @@ class RanksCommand extends Command implements PluginOwned {
   return EasyRankup::getInstance();
  }
  
-} 
+}
