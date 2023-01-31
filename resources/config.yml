@@ -1,4 +1,7 @@
 
+# Select economy support (EasyEconomy, EconomyAPI, BedrockEconomy) #
+conomy-type: "EasyEconomy"
+
 # Select database type (MYSQL, SQLITE3) #
 database-type: "sqlite3"
 
