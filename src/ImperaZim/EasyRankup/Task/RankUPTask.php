@@ -8,9 +8,9 @@ use pocketmine\scheduler\Task;
 use ImperaZim\EasyRankup\EasyRankup;
 use ImperaZim\EasyRankup\PluginUtils;
 use pocketmine\world\sound\XpCollectSound; 
+use ImperaZim\EasyRankup\Dependence\Economy;
 use pocketmine\scheduler\CancelTaskException;
-use ImperaZim\EasyRankup\Dependence\EasyEconomy;
-use pocketmine\entity\animation\TotemUseAnimation; 
+use pocketmine\entity\animation\TotemUseAnimation;
 
 class RankUPTask extends Task {
 
@@ -56,7 +56,7 @@ class RankUPTask extends Task {
    throw new CancelTaskException();
   } 
   
-  $this->data["money"] = $this->data["price"] > EasyEconomy::getMoney($player)
+  $this->data["money"] = $this->data["price"] > Economy::getMoney($player)
   ? "§c" . $this->data['money'] . " [!]"
   : "§a" . $this->data['money'] . " [ ]";
   
@@ -72,19 +72,19 @@ class RankUPTask extends Task {
   
   if ($player->isSneaking()) {
    $player->sendPopup("");
-   if ($this->data["price"] > EasyEconomy::getMoney($player)) {
+   if ($this->data["price"] > Economy::getMoney($player)) {
     $player->sendMessage(PluginUtils::convertString([], [], $plugin->getMessages()->getNested("commands.rankup.notify.insufficient_money")));
    }
-   if ($this->data["price"] <= EasyEconomy::getMoney($player)) {
+   if ($this->data["price"] <= Economy::getMoney($player)) {
     $this->data["manager"]->Upgrade($player, $this->data["rankto"]);
-    EasyEconomy::reduceMoney($player, $this->data["price"]);
+    Economy::reduceMoney($player, $this->data["price"]);
     $this->data["manager"]->getPermissionManager()->UpdatePermissions($player);
     $player->sendMessage(PluginUtils::convertString(["{rank}", "{money}"], [$this->data['tag'], $this->data['money']], $plugin->getMessages()->getNested("commands.rankup.notify.successfully_message")));
     $message = explode(":", PluginUtils::convertString(["{rank}"], [$this->data['tag']], $plugin->getMessages()->getNested("commands.rankup.notify.successfully_title")));
     $player->sendTitle($message[0], $message[1]); 
     
     $player->broadcastAnimation(new TotemUseAnimation($player)); 
-    $player->getWorld()->addSound($player->getPosition(), new XpCollectSound(), [$player]); 
+    $player->getWorld()->addSound($player->getPosition(), new XpCollectSound($player->getPosition()), [$player]); 
    }
    
    throw new CancelTaskException();
