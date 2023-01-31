@@ -12,8 +12,8 @@ class PluginUtils extends EasyRankup {
  public static function convertCurrency($value) {
   if ($value > self::getMaxCurrency()) {
    return number_format($value);
-  } 
-  if ($value > 999) {
+  }  
+  if ($value > 1000) {
    $x = round($value);
    $x_number_format = number_format($x);
    $x_array = explode(',', $x_number_format);
@@ -28,6 +28,9 @@ class PluginUtils extends EasyRankup {
  }   
   
  public static function convertElevation($value) {
+  if ($value > self::getMaxCurrency()) {
+   return number_format(self::getMaxCurrency());
+  }   
   $value = strtoupper($value);
   $currency = explode("E", $value);
   $value = isset($currency[1]) ? $currency[0] : $value;
@@ -38,8 +41,9 @@ class PluginUtils extends EasyRankup {
  }
  
  public static function getMaxCurrency() {
-  return 999000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
+  return 9223372036854775807;
+  //return 999000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
   //return (int) self::convertElevation("999E93");
  } 
  
-} 
+}
