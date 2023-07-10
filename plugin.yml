@@ -1,5 +1,5 @@
 name: EasyRankup
 version: 1.0.1
 author: ImperaZim
-api: [4.0.0]
+api: 4.0.0
 main: ImperaZim\EasyRankup\EasyRankup
