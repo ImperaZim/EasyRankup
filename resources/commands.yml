@@ -1,0 +1,13 @@
+
+# ==================== #
+prefix: "§l§eRANKUP§r"
+# ==================== #
+
+# account'
+command:
+ rank_command:
+  trigger: 'rank'
+  description: 'See rank details'
+  aliases: ['elo']
+  responde_messages: 
+   source_undaccount: 'You don`t have enough money in your account'

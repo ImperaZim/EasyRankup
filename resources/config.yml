@@ -1,14 +1,14 @@
 
-# Select economy support (EasyEconomy, EconomyAPI, BedrockEconomy) #
-conomy-type: "EasyEconomy"
-
-# Select database type (MYSQL, SQLITE3) #
-database-type: "sqlite3"
+# Select database type (mysql, sqlite)
+# Select economy support (easyeconomy, economyapi, bedrockeconomy)
+def:
+ economy_provider: 'EasyEconomy'
+ database_provider: 'sqlite'
 
 # MYSQL Settings  #
 database-provinder:
  host: 0.0.0.0
  port: 3306
- user: s000_easyplugins
+ user: user
  password: admin
- db: s000_easyplugins
+ db: your_database
